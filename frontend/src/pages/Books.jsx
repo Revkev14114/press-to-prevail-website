@@ -1,7 +1,9 @@
-import { ArrowUpRight, Clock3, Compass, Layers, Home as HomeIcon, Flag } from "lucide-react";
+import { useState } from "react";
+import { ArrowUpRight, Clock3, Compass, Layers, Home as HomeIcon, Flag, BookOpen } from "lucide-react";
 import { SITE, BOOKS, REVIEWS, ARTICLES } from "../content/site";
 import { Reveal, MaskedLine } from "../components/Motion";
 import BookCard from "../components/BookCard";
+import ChapterPreview from "../components/ChapterPreview";
 import EnquiryForm from "../components/EnquiryForm";
 
 const flagship = BOOKS[0];
@@ -15,8 +17,11 @@ const BLUEPRINT_THEMES = [
 ];
 
 export default function Books() {
+  const [chapterOpen, setChapterOpen] = useState(false);
+
   return (
     <div data-testid="books-page" className="bg-night text-[#F9F8F6]">
+      <ChapterPreview open={chapterOpen} onClose={() => setChapterOpen(false)} />
       {/* HERO */}
       <section className="relative overflow-hidden px-6 pb-20 pt-[130px] lg:px-10 lg:pb-28 lg:pt-[170px]">
         <div
@@ -89,6 +94,13 @@ export default function Books() {
                 >
                   Buy on Amazon <ArrowUpRight className="h-4 w-4" />
                 </a>
+                <button
+                  data-testid="read-sample-chapter-btn"
+                  onClick={() => setChapterOpen(true)}
+                  className="inline-flex items-center gap-2 rounded-full border border-gold/60 px-7 py-3.5 text-sm font-semibold text-gold transition-colors duration-300 hover:bg-gold hover:text-night"
+                >
+                  <BookOpen className="h-4 w-4" /> Read Chapter One — Free
+                </button>
                 <button
                   data-testid="signed-copy-btn"
                   onClick={() => document.getElementById("enquire")?.scrollIntoView({ behavior: "smooth" })}

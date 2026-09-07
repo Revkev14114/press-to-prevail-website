@@ -76,6 +76,16 @@ html.lenis, html.lenis body {
     opacity: 0.05;
 }
 
+.chapter-dropcap > p:first-of-type::first-letter {
+    float: left;
+    font-family: "Bebas Neue", "Arial Narrow", sans-serif;
+    font-size: 4.2em;
+    line-height: 0.85;
+    padding-right: 0.12em;
+    padding-top: 0.05em;
+    color: #C9A227;
+}
+
 @keyframes marquee-drift {
     from { transform: translateX(0); }
     to { transform: translateX(-50%); }
