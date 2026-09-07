@@ -48,13 +48,13 @@ function Hero() {
         </motion.div>
 
         <h1 data-testid="hero-banner" className="mt-6 font-display uppercase leading-[0.95] tracking-[0.02em] text-[#F9F8F6]">
-          <MaskedLine delay={0.3} className="text-[13.5vw] sm:text-7xl lg:text-8xl xl:text-[7.5rem]">
+          <MaskedLine delay={0.3} className="text-[11vw] sm:text-6xl lg:text-7xl xl:text-[6.25rem]">
             Building <span className="text-gold">Faith,</span>
           </MaskedLine>
-          <MaskedLine delay={0.45} className="text-[13.5vw] sm:text-7xl lg:text-8xl xl:text-[7.5rem]">
+          <MaskedLine delay={0.45} className="text-[11vw] sm:text-6xl lg:text-7xl xl:text-[6.25rem]">
             Building <span className="text-gold">Purpose,</span>
           </MaskedLine>
-          <MaskedLine delay={0.6} className="text-[13.5vw] sm:text-7xl lg:text-8xl xl:text-[7.5rem]">
+          <MaskedLine delay={0.6} className="text-[11vw] sm:text-6xl lg:text-7xl xl:text-[6.25rem]">
             Building Lives That <span className="text-gold">Last.</span>
           </MaskedLine>
         </h1>
