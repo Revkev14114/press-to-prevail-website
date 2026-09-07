@@ -76,9 +76,20 @@ export default function ChapterPreview({ open, onClose }) {
                 {SAMPLE_CHAPTER.title}
               </h3>
               <div className="mt-3 h-px w-14 bg-gold" />
-              <div className="chapter-dropcap mt-8 space-y-6 font-serif text-lg leading-relaxed text-[#F9F8F6]/85">
-                {SAMPLE_CHAPTER.paragraphs.map((p, i) => (
-                  <p key={i}>{p}</p>
+              <div className="chapter-dropcap mt-8 font-serif text-lg leading-relaxed text-[#F9F8F6]/85">
+                {SAMPLE_CHAPTER.sections.map((section, i) => (
+                  <div key={i} className={i > 0 ? "mt-10" : ""}>
+                    {section.heading && (
+                      <h4 className="mb-5 font-display text-2xl uppercase tracking-[0.06em] text-gold">
+                        {section.heading}
+                      </h4>
+                    )}
+                    <div className="space-y-6">
+                      {section.paragraphs.map((p, j) => (
+                        <p key={j}>{p}</p>
+                      ))}
+                    </div>
+                  </div>
                 ))}
               </div>
               <p className="mt-10 border-t border-white/10 pt-6 font-mono text-[11px] uppercase tracking-[0.2em] text-stone2/50">
