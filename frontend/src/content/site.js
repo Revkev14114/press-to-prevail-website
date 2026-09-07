@@ -30,7 +30,7 @@ export const BOOKS = [
   {
     id: "building-the-perfect-home",
     title: "Building the Perfect Home",
-    subtitle: "Every Home Begins With a Blueprint. Every Life Does Too.",
+    subtitle: "God's Blueprint for Building a Life That Lasts",
     year: "2025",
     coverUrl: "/assets/cover-building-the-perfect-home.jpg",
     description:

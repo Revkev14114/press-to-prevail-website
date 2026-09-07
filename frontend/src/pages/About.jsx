@@ -7,9 +7,9 @@ import VideoGallery from "../components/VideoGallery";
 import EnquiryForm from "../components/EnquiryForm";
 
 const PILLARS = [
-  { icon: Compass, title: "The Job Site", body: "Forty-plus years of homebuilding — where the lessons of blueprints, footings and straight lines became a way of seeing lives." },
+  { icon: Compass, title: "The Job Site", body: "Forty-plus years of residential construction — where foundations, blueprints, structure and setbacks became a way of seeing lives." },
   { icon: PenLine, title: "The Page", body: "Building the Perfect Home gathers it all: trade wisdom and timeless biblical principles in one blueprint for a life that lasts." },
-  { icon: Mic2, title: "The Stage", body: "Keynotes and church talks built the same way as a good house — honest materials, solid structure, no shortcuts." },
+  { icon: Mic2, title: "The Stage & the Classroom", body: "Speaking and teaching built the same way as a good house — honest materials, solid structure, no shortcuts." },
   { icon: Sparkles, title: "The Next Chapter", body: "A coaching practice is forming — small cohorts for people ready to stop patching and start rebuilding." },
 ];
 
@@ -39,28 +39,29 @@ export default function About() {
             <Reveal>
               <span className="inline-flex items-center gap-3 font-mono text-xs uppercase tracking-[0.28em] text-gold">
                 <span className="h-px w-8 bg-gold" />
-                About — The Builder Behind the Blueprint
+                About — Kevin Johnson
               </span>
             </Reveal>
             <h1 className="mt-6 font-display uppercase leading-[0.95] tracking-[0.02em]">
               <MaskedLine delay={0.15} className="text-5xl sm:text-6xl lg:text-7xl">
-                Built by hand.
+                Builder. Author.
               </MaskedLine>
               <MaskedLine delay={0.3} className="text-5xl sm:text-6xl lg:text-7xl">
-                <span className="text-gold">Led by faith.</span>
+                <span className="text-gold">Speaker. Teacher.</span>
               </MaskedLine>
             </h1>
             <Reveal delay={0.5}>
               <p className="mt-8 max-w-lg text-base font-light leading-relaxed text-stone2 sm:text-lg">
-                {SITE.name} didn't begin on a stage. It began on job sites — more than forty years
-                of pouring foundations, squaring walls and walking families into homes built to last.
+                For more than 40 years, Kevin Johnson has been building homes — and learning
+                lessons about what it takes to build something that lasts.
               </p>
               <p className="mt-5 max-w-lg text-base font-light leading-relaxed text-stone2">
-                Somewhere along the way, a conviction kept surfacing: the houses were never the
-                point. God builds something far greater than a house — and every life, like every
-                home, begins with a blueprint.
+                His career in residential construction gave him a firsthand understanding of
+                foundations, blueprints, structure, pressure, setbacks, and the importance of
+                getting the details right. But along the way, Kevin discovered that the principles
+                used to build a strong home have an even greater application: building a strong life.
               </p>
-              <p className="mt-8 font-serif text-2xl italic text-gold/90">— Founder, {SITE.name}</p>
+              <p className="mt-8 font-serif text-2xl italic text-gold/90">— Kevin Johnson, Founder of {SITE.name}</p>
             </Reveal>
           </div>
           <Reveal delay={0.2}>
@@ -68,8 +69,9 @@ export default function About() {
               <div className="absolute -right-4 -top-4 h-full w-full rounded-lg border border-gold/40" />
               <div className="relative overflow-hidden rounded-lg shadow-[0_35px_80px_-25px_rgba(0,0,0,0.7)] ring-1 ring-white/10">
                 <img
-                  src="https://images.pexels.com/photos/27471477/pexels-photo-27471477.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=900&w=1200"
-                  alt="Founder of Press To Prevail"
+                  src="/assets/kevin-johnson.jpg"
+                  alt="Kevin Johnson — Builder, Author, Speaker, Teacher"
+                  data-testid="about-portrait"
                   className="aspect-[4/5] w-full object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-night/70 via-transparent to-transparent" />
@@ -82,8 +84,69 @@ export default function About() {
         </div>
       </section>
 
-      {/* TIMELINE */}
+      {/* BIO — THE STRAIGHT STORY */}
       <section className="border-y border-white/10 bg-[#101013] py-24 lg:py-32">
+        <div className="mx-auto max-w-7xl px-6 lg:px-10">
+          <div className="grid gap-14 lg:grid-cols-[0.8fr_1.2fr] lg:gap-20">
+            <Reveal>
+              <span className="inline-flex items-center gap-3 font-mono text-xs uppercase tracking-[0.28em] text-gold">
+                <span className="h-px w-8 bg-gold" />
+                The Straight Story
+              </span>
+              <h2 className="mt-5 font-display text-4xl uppercase leading-[0.95] tracking-[0.03em] sm:text-5xl">
+                Pressure doesn't have to defeat us. <span className="text-gold">It can develop us.</span>
+              </h2>
+              <figure className="mt-10 border-l-2 border-gold pl-6">
+                <blockquote className="font-serif text-lg italic leading-relaxed text-[#F9F8F6]/85 sm:text-xl">
+                  “Consider it pure joy, my brothers and sisters, whenever you face trials of many
+                  kinds, because you know that the testing of your faith produces perseverance.”
+                </blockquote>
+                <figcaption className="mt-4 font-mono text-[11px] uppercase tracking-[0.25em] text-gold/80">
+                  James 1:2-3
+                </figcaption>
+              </figure>
+            </Reveal>
+            <div className="space-y-6 text-base font-light leading-relaxed text-stone2">
+              <Reveal delay={0.1}>
+                <p>
+                  A lifelong student and teacher of God's Word, Kevin combines his experience in
+                  construction with biblical principles to help people see their lives from a
+                  different perspective. His message is practical, straightforward, and rooted in a
+                  simple truth: pressure doesn't have to defeat us. It can develop us.
+                </p>
+                <p>
+                  That conviction became the foundation for {SITE.name} — more than a phrase: a
+                  mindset and a movement built around the belief that adversity, pressure, and
+                  challenges can become part of the process that strengthens us. Rather than
+                  allowing pressure to define the outcome, we can press through it, learn from it,
+                  and ultimately prevail.
+                </p>
+              </Reveal>
+              <Reveal delay={0.18}>
+                <p>
+                  Kevin is the author of <em className="font-serif italic text-[#F9F8F6]">Building the Perfect Home: God's
+                  Blueprint for Building a Life That Lasts</em>, where he uses more than four decades of
+                  homebuilding experience to explore what God's Word teaches about constructing a
+                  life with purpose, strength, and lasting significance.
+                </p>
+                <p>
+                  Whether speaking from a stage, teaching a class, writing a book, or simply having
+                  a straight conversation, Kevin's goal is the same: to challenge people to build
+                  with purpose, stand on a strong foundation, and press forward until they prevail.
+                </p>
+              </Reveal>
+              <Reveal delay={0.26}>
+                <p className="border-t border-white/10 pt-6 font-display text-2xl uppercase tracking-[0.08em] text-gold">
+                  Press to Prevail. <span className="text-[#F9F8F6]">Faith. Foundation. Focus. Finish.</span>
+                </p>
+              </Reveal>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* TIMELINE */}
+      <section className="py-24 lg:py-32">
         <div className="mx-auto max-w-7xl px-6 lg:px-10">
           <Reveal>
             <span className="inline-flex items-center gap-3 font-mono text-xs uppercase tracking-[0.28em] text-gold">
@@ -110,7 +173,7 @@ export default function About() {
       </section>
 
       {/* PILLARS */}
-      <section className="mx-auto max-w-7xl px-6 py-24 lg:px-10 lg:py-32">
+      <section className="mx-auto max-w-7xl px-6 pb-24 lg:px-10 lg:pb-32">
         <Reveal>
           <span className="inline-flex items-center gap-3 font-mono text-xs uppercase tracking-[0.28em] text-gold">
             <span className="h-px w-8 bg-gold" />
