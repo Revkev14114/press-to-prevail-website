@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { X, ArrowUpRight, BookOpen } from "lucide-react";
 import { BOOKS } from "../content/site";
-import { SAMPLE_CHAPTER } from "../content/sampleChapter";
+import { SAMPLE_CHAPTER, SAMPLE_INTRO } from "../content/sampleChapter";
 
 export default function ChapterPreview({ open, onClose }) {
   const scrollRef = useRef(null);
@@ -72,11 +72,26 @@ export default function ChapterPreview({ open, onClose }) {
             </div>
 
             <div ref={scrollRef} onScroll={onScroll} className="flex-1 overflow-y-auto px-6 py-10 sm:px-12">
-              <h3 className="font-display text-4xl uppercase tracking-[0.04em] text-[#F9F8F6] sm:text-5xl">
-                {SAMPLE_CHAPTER.title}
-              </h3>
-              <div className="mt-3 h-px w-14 bg-gold" />
               <div className="chapter-dropcap mt-8 font-serif text-lg leading-relaxed text-[#F9F8F6]/85">
+                <h3 className="mb-6 font-display text-3xl uppercase leading-none tracking-[0.05em] text-gold sm:text-4xl">
+                  {SAMPLE_INTRO.title}
+                </h3>
+                <div className="space-y-6">
+                  {SAMPLE_INTRO.paragraphs.map((p, i) => (
+                    <p key={i}>{p}</p>
+                  ))}
+                </div>
+                <div className="my-12 flex items-center gap-5">
+                  <span className="h-px flex-1 bg-white/15" />
+                  <span className="font-mono text-[11px] uppercase tracking-[0.3em] text-gold">
+                    {SAMPLE_CHAPTER.chapterLabel}
+                  </span>
+                  <span className="h-px flex-1 bg-white/15" />
+                </div>
+                <h3 className="font-display text-4xl uppercase leading-none tracking-[0.04em] text-[#F9F8F6] sm:text-5xl">
+                  {SAMPLE_CHAPTER.title}
+                </h3>
+                <div className="mb-8 mt-3 h-px w-14 bg-gold" />
                 {SAMPLE_CHAPTER.sections.map((section, i) => (
                   <div key={i} className={i > 0 ? "mt-10" : ""}>
                     {section.heading && (

@@ -76,7 +76,7 @@ html.lenis, html.lenis body {
     opacity: 0.05;
 }
 
-.chapter-dropcap > p:first-of-type::first-letter {
+.chapter-dropcap p:first-of-type::first-letter {
     float: left;
     font-family: "Bebas Neue", "Arial Narrow", sans-serif;
     font-size: 4.2em;
