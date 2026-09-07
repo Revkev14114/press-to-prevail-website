@@ -92,15 +92,17 @@ export default function BookCard({ book, featured = false }) {
               >
                 <BookOpen className="h-4 w-4" /> Kindle
               </a>
-              <a
-                href={book.audibleUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                data-testid={`audible-buy-button-${book.id}`}
-                className="inline-flex items-center gap-2 rounded-full border border-white/25 px-4 py-2.5 text-sm font-medium text-[#F9F8F6] transition-colors duration-300 hover:border-gold hover:text-gold"
-              >
-                <Headphones className="h-4 w-4" /> Audible
-              </a>
+              {book.audibleUrl && (
+                <a
+                  href={book.audibleUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  data-testid={`audible-buy-button-${book.id}`}
+                  className="inline-flex items-center gap-2 rounded-full border border-white/25 px-4 py-2.5 text-sm font-medium text-[#F9F8F6] transition-colors duration-300 hover:border-gold hover:text-gold"
+                >
+                  <Headphones className="h-4 w-4" /> Audible
+                </a>
+              )}
             </>
           )}
         </div>

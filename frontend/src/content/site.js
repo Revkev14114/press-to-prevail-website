@@ -37,9 +37,9 @@ export const BOOKS = [
       "Building the Perfect Home connects more than 40 years of homebuilding experience with timeless biblical principles to reveal how God builds something far greater than a house.",
     quote: "Every home begins with a blueprint. Every life does too.",
     awards: ["40+ Years of Homebuilding Wisdom", "Timeless Biblical Principles"],
-    amazonUrl: "https://www.amazon.com/dp/B0DREPLACE1",
-    kindleUrl: "https://www.amazon.com/dp/B0DREPLACE1",
-    audibleUrl: "https://www.audible.com/pd/REPLACE1",
+    amazonUrl: "https://www.amazon.com/dp/B0HFC1ZJ3P",
+    kindleUrl: "https://www.amazon.com/dp/B0HFC1ZJ3P?bestFormat=true&k=building+the+perfect+home",
+    audibleUrl: "",
   },
   {
     id: "foundation-first",
