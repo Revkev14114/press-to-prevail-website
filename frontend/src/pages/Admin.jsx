@@ -29,15 +29,20 @@ export default function Admin() {
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
   const [enquiries, setEnquiries] = useState([]);
+  const [subscribers, setSubscribers] = useState([]);
   const [loading, setLoading] = useState(false);
 
   const loadEnquiries = useCallback(async () => {
     setLoading(true);
     try {
-      const { data } = await axios.get(`${API}/enquiries`, { withCredentials: true });
-      setEnquiries(data);
+      const [enq, subs] = await Promise.all([
+        axios.get(`${API}/enquiries`, { withCredentials: true }),
+        axios.get(`${API}/subscribers`, { withCredentials: true }),
+      ]);
+      setEnquiries(enq.data);
+      setSubscribers(subs.data);
     } catch {
-      toast.error("Could not load enquiries.");
+      toast.error("Could not load data.");
     } finally {
       setLoading(false);
     }
@@ -220,6 +225,35 @@ export default function Admin() {
             </table>
           </div>
         )}
+      </div>
+
+      <div className="mt-14">
+        <div className="flex items-center justify-between gap-4">
+          <h2 className="font-serif text-2xl font-medium tracking-tight">Chapter readers</h2>
+          <span data-testid="admin-subscriber-count" className="rounded-full border border-hairline bg-surface px-4 py-1.5 font-mono text-xs uppercase tracking-[0.2em] text-slate2">
+            {subscribers.length} on the list
+          </span>
+        </div>
+        <p className="mt-2 text-sm text-slate2">Readers who unlocked the free chapter preview.</p>
+        <div className="mt-6">
+          {subscribers.length === 0 ? (
+            <p data-testid="admin-subscribers-empty" className="rounded-lg border border-dashed border-ink/20 py-10 text-center text-sm text-slate2">
+              No readers yet — they'll appear here when someone unlocks the chapter.
+            </p>
+          ) : (
+            <div data-testid="admin-subscribers-table" className="grid gap-px overflow-hidden rounded-lg border border-hairline bg-hairline sm:grid-cols-2 lg:grid-cols-3">
+              {subscribers.map((sub) => (
+                <div key={sub.id} data-testid={`admin-subscriber-${sub.id}`} className="bg-ivory px-5 py-4">
+                  <p className="text-sm font-medium text-ink">{sub.name || "Reader"}</p>
+                  <p className="text-xs text-slate2">{sub.email}</p>
+                  <p className="mt-1 font-mono text-[10px] uppercase tracking-[0.15em] text-muted2">
+                    {new Date(sub.created_at).toLocaleDateString(undefined, { month: "short", day: "numeric", year: "numeric" })} · {sub.source}
+                  </p>
+                </div>
+              ))}
+            </div>
+          )}
+        </div>
       </div>
     </div>
   );

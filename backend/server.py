@@ -150,6 +150,37 @@ class StatusUpdate(BaseModel):
     status: str
 
 
+class SubscriberCreate(BaseModel):
+    email: EmailStr
+    name: Optional[str] = None
+    source: str = "chapter-preview"
+
+
+class Subscriber(BaseDocument):
+    email: EmailStr
+    name: Optional[str] = None
+    source: str = "chapter-preview"
+    created_at: str = Field(default_factory=lambda: datetime.now(timezone.utc).isoformat())
+
+
+@api_router.post("/subscribers", status_code=201)
+async def create_subscriber(input: SubscriberCreate):
+    email = input.email.lower()
+    existing = await db.subscribers.find_one({"email": email, "source": input.source})
+    if existing:
+        return Subscriber.from_mongo(existing).model_dump()
+    subscriber = Subscriber(email=email, name=input.name, source=input.source)
+    result = await db.subscribers.insert_one(subscriber.to_mongo())
+    subscriber.id = str(result.inserted_id)
+    return subscriber.model_dump()
+
+
+@api_router.get("/subscribers")
+async def list_subscribers(user: dict = Depends(get_current_user)):
+    docs = await db.subscribers.find().sort("created_at", -1).to_list(1000)
+    return [Subscriber.from_mongo(d).model_dump() for d in docs]
+
+
 @api_router.post("/enquiries", status_code=201)
 async def create_enquiry(input: EnquiryCreate):
     enquiry = Enquiry(**input.model_dump())
