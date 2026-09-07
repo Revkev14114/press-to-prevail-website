@@ -3,6 +3,7 @@ load_dotenv()
 
 import os
 import logging
+import asyncio
 from datetime import datetime, timezone, timedelta
 from typing import List, Optional, Annotated
 
@@ -13,6 +14,8 @@ from fastapi import FastAPI, APIRouter, HTTPException, Request, Response, Depend
 from motor.motor_asyncio import AsyncIOMotorClient
 from pydantic import BaseModel, Field, ConfigDict, EmailStr, BeforeValidator
 from starlette.middleware.cors import CORSMiddleware
+
+from emailer import notify_owner_of_enquiry, send_visitor_confirmation
 
 mongo_url = os.environ['MONGO_URL']
 client = AsyncIOMotorClient(mongo_url)
@@ -152,6 +155,10 @@ async def create_enquiry(input: EnquiryCreate):
     enquiry = Enquiry(**input.model_dump())
     result = await db.enquiries.insert_one(enquiry.to_mongo())
     enquiry.id = str(result.inserted_id)
+    admin_url = f"{os.environ.get('FRONTEND_URL', '')}/admin"
+    site_url = os.environ.get('FRONTEND_URL', '')
+    asyncio.create_task(notify_owner_of_enquiry(enquiry.model_dump(), admin_url))
+    asyncio.create_task(send_visitor_confirmation(enquiry.model_dump(), site_url))
     return enquiry.model_dump()
 
 

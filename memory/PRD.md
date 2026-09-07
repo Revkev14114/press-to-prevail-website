@@ -36,6 +36,7 @@
 - Enquiry form → POST /api/enquiries → MongoDB; Admin /admin (JWT cookie auth) with enquiry inbox + status management
 - Lenis smooth scroll, grain overlay, framer-motion reveals throughout
 - Still MOCKED: Amazon/Kindle/Audible URLs, YouTube video IDs, press/review quotes, articles links, social links
+- Email alerts (2026-09-07): Resend via Emergent managed email — owner notification to kevin@presstoprevail.com + branded visitor confirmation on every enquiry (non-blocking, fire-and-forget). Reply-To set to kevin@presstoprevail.com.
 - Five-page growth (2026-09-07): Speaking page (video reel, flagship talks, logistics accordions, booking form), Consulting page (coaching waitlist, workshops, church consulting, 4-step process), Contact page (info, full enquiry form, FAQ accordion). Nav now: Home · Speaking · The Book · About · Consulting · Contact + gold "Let's Connect" CTA. About keeps a teaser linking to Speaking.
 
 ## Backlog (prioritized)
