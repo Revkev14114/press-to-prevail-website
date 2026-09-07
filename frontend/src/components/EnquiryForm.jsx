@@ -144,11 +144,10 @@ export default function EnquiryForm({ compact = false }) {
                 type="submit"
                 data-testid="enquiry-form-submit"
                 disabled={sending}
-                className="mt-6 inline-flex w-full items-center justify-center gap-2 rounded-full bg-terracotta px-6 py-3.5 text-sm font-medium text-ivory transition-colors duration-300 hover:bg-ivory hover:text-ink disabled:opacity-60 sm:w-auto"
+                className="mt-6 inline-flex w-full items-center justify-center gap-2 rounded-full bg-gold px-6 py-3.5 text-sm font-semibold text-night transition-colors duration-300 hover:bg-goldlight disabled:opacity-60 sm:w-auto"
               >
                 {sending ? "Sending…" : "Send Enquiry"} <Send className="h-4 w-4" />
-              </button>
-            </form>
+              </button>            </form>
           )}
         </Reveal>
       </div>

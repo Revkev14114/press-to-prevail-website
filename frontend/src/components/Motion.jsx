@@ -41,15 +41,15 @@ export const Eyebrow = ({ children, light = false }) => (
 export const Marquee = ({ items }) => {
   const row = [...items, ...items];
   return (
-    <div data-testid="press-marquee" className="relative overflow-hidden border-y border-hairline bg-surface py-6">
+    <div data-testid="press-marquee" className="relative overflow-hidden border-y border-white/10 bg-[#101013] py-6">
       <div className="marquee-track flex w-max items-center gap-14 pr-14">
         {row.map((item, i) => (
           <div key={i} className="flex items-center gap-14 whitespace-nowrap">
-            <span className="font-serif text-lg italic text-ink/80">“{item.quote}”</span>
-            <span className="font-mono text-[11px] uppercase tracking-[0.25em] text-muted2">
+            <span className="font-serif text-lg italic text-[#F9F8F6]/80">“{item.quote}”</span>
+            <span className="font-mono text-[11px] uppercase tracking-[0.25em] text-gold/70">
               — {item.source}
             </span>
-            <span className="h-1.5 w-1.5 rotate-45 bg-terracotta/70" />
+            <span className="h-1.5 w-1.5 rotate-45 bg-gold/70" />
           </div>
         ))}
       </div>

@@ -69,7 +69,7 @@ export default function BookCard({ book, featured = false }) {
             target="_blank"
             rel="noopener noreferrer"
             data-testid={`amazon-buy-button-${book.id}`}
-            className="inline-flex items-center gap-2 rounded-full bg-ink px-5 py-2.5 text-sm font-medium text-ivory transition-colors duration-300 hover:bg-terracotta"
+            className="inline-flex items-center gap-2 rounded-full bg-gold px-5 py-2.5 text-sm font-semibold text-night transition-colors duration-300 hover:bg-goldlight"
           >
             <ShoppingCart className="h-4 w-4" /> Buy on Amazon
           </a>

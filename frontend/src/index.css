@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=JetBrains+Mono:wght@400;500&family=Outfit:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=JetBrains+Mono:wght@400;500&family=Outfit:wght@300;400;500;600;700&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -43,8 +43,8 @@
         overflow-x: hidden;
     }
     ::selection {
-        background: #C85A32;
-        color: #FDFBF7;
+        background: #C9A227;
+        color: #0C0C0E;
     }
     ::-webkit-scrollbar {
         width: 10px;
@@ -71,9 +71,9 @@ html.lenis, html.lenis body {
     position: fixed;
     inset: 0;
     z-index: 60;
-    background-image: radial-gradient(#1a1d20 0.8px, transparent 0.8px);
+    background-image: radial-gradient(#ffffff 0.8px, transparent 0.8px);
     background-size: 22px 22px;
-    opacity: 0.035;
+    opacity: 0.05;
 }
 
 @keyframes marquee-drift {
