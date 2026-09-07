@@ -146,10 +146,10 @@ export const KEYNOTES = [
 ];
 
 export const TIMELINE = [
-  { year: "2015", title: "The First Manuscript", body: "Years of early-morning pages become The Finish Line Faith — rejected eleven times, then impossible to ignore." },
-  { year: "2019", title: "The Movement Begins", body: "A single talk crosses ten million views. Stages across the country open within the year." },
-  { year: "2022", title: "Foundation First", body: "The second book debuts as a bestseller and is translated into nine languages." },
-  { year: "2024", title: "Press To Prevail", body: "The flagship book launches with a 40-city tour — and the first steps toward a coaching practice begin." },
+  { year: "1983", title: "The First Foundation", body: "A homebuilding career begins — one poured footing, one framed wall, one family at a time. Forty years of lessons start stacking up." },
+  { year: "2015", title: "Notes Became Chapters", body: "Decades of job-site wisdom and quiet-time journaling begin taking shape as something more: a blueprint for building lives, not just houses." },
+  { year: "2025", title: "Building the Perfect Home", body: "The flagship book launches — connecting 40+ years of homebuilding experience with timeless biblical principles." },
+  { year: "Next", title: "The Coaching Practice", body: "Small cohorts for people ready to stop patching and start rebuilding — faith, foundation, focus, finish." },
 ];
 
 export const ARTICLES = [

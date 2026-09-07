@@ -29,13 +29,13 @@
 5. Admin inbox to view and manage enquiries
 
 ## Implemented (2026-09-07)
-- Kinetic hero with masked line-by-line reveal + 3D parallax portrait + rotating badge
-- Editorial press marquee (pauses on hover), numbered manifesto chapters, press quote grid
-- Featured book spotlight + Books page catalog (3 titles, awards, buy buttons, review filter, articles list)
-- About page: bio, timeline, pillars, media-kit CTA, full Speaking & Videos section (4 YouTube embeds w/ lightbox)
-- Enquiry form (name/email/org/type/date/location/audience/topic/budget/message) → POST /api/enquiries → success state + toast
-- Admin: /admin login (JWT cookie), enquiry table, status updates (new/contacted/confirmed/archived), 401 guard verified
-- Lenis momentum scrolling, grain overlay, page title/meta updated
+- Full rebrand to "Press To Prevail": user-supplied metallic emblem (logo + hero background), dark charcoal/stone/gold palette, Bebas Neue display type, gold buttons throughout
+- Home: parallax logo hero with banner "Building Faith, Building Purpose, Building Lives That Last", press marquee, featured-book spotlight (real cover), Four Pillars (Faith/Foundation/Focus/Finish), speaking preview, press quotes, enquiry form
+- Books: rebuilt around real book "Building the Perfect Home" (user cover + copy), blueprint-grid hero, "Inside the Blueprint" themes, early-reader reviews, two upcoming titles with Notify-Me, articles list
+- About: rebuilt dark/gold — "Built by Hand. Led by Faith." hero, 1983→Next timeline, pillars, media-kit CTA, Speaking & Videos section (4 YouTube embeds w/ lightbox)
+- Enquiry form → POST /api/enquiries → MongoDB; Admin /admin (JWT cookie auth) with enquiry inbox + status management
+- Lenis smooth scroll, grain overlay, framer-motion reveals throughout
+- Still MOCKED: Amazon/Kindle/Audible URLs, YouTube video IDs, press/review quotes, founder portrait photo, articles links
 
 ## Backlog (prioritized)
 - P0: Swap in user's real brand — logo, name, colors, book covers, real Amazon product links, real YouTube IDs (all via src/content/site.js + image files in /public/assets/)
