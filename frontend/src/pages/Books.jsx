@@ -97,9 +97,9 @@ export default function Books() {
                 <button
                   data-testid="read-sample-chapter-btn"
                   onClick={() => setChapterOpen(true)}
-                  className="inline-flex items-center gap-2 rounded-full border border-gold/60 px-7 py-3.5 text-sm font-semibold text-gold transition-colors duration-300 hover:bg-gold hover:text-night"
+                  className="inline-flex items-center gap-2 rounded-full bg-gold px-7 py-3.5 text-sm font-semibold uppercase tracking-[0.08em] text-night transition-colors duration-300 hover:bg-goldlight"
                 >
-                  <BookOpen className="h-4 w-4" /> Read Chapter One — Free
+                  <BookOpen className="h-4 w-4" /> Start the Journey
                 </button>
                 <button
                   data-testid="signed-copy-btn"
