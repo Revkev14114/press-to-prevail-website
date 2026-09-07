@@ -1,0 +1,132 @@
+{
+  "project_title": "Arthur Vance - Author, Keynote Speaker & Thought Leader Platform",
+  "app_type": "author_speaker_marketing_site",
+  "design_archetype": "Warm Editorial & Architectural Precision (Awwwards SOTD Level)",
+  "theme": {
+    "primary_mode": "light_warm_editorial",
+    "background_default": "#FDFBF7",
+    "background_surface": "#F4EFE6",
+    "background_dark_surface": "#12161A",
+    "text_primary": "#1A1D20",
+    "text_secondary": "#525960",
+    "text_muted": "#858E96",
+    "text_inverse": "#F9F8F6",
+    "accent_terracotta": "#C85A32",
+    "accent_gold": "#D4AF37",
+    "accent_sage": "#5F7466",
+    "border_subtle": "#E6E1D7",
+    "border_emphasis": "#1A1D20"
+  },
+  "typography": {
+    "heading_font": "Cormorant Garamond, Serif",
+    "body_font": "Outfit, sans-serif",
+    "mono_font": "JetBrains Mono, monospace",
+    "google_fonts_url": "https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=JetBrains+Mono:wght@400;500&family=Outfit:wght@300;400;500;600;700&display=swap",
+    "hierarchy": {
+      "h1_hero": "text-4xl sm:text-5xl lg:text-6xl font-serif font-normal tracking-tight leading-[1.08]",
+      "h2_section": "text-2xl sm:text-3xl lg:text-4xl font-serif font-medium tracking-tight leading-snug",
+      "h3_card": "text-xl sm:text-2xl font-serif font-semibold tracking-tight",
+      "subtitle": "text-lg sm:text-xl font-sans font-light text-secondary leading-relaxed",
+      "body": "text-base font-sans font-normal text-secondary leading-relaxed",
+      "caption_mono": "text-xs font-mono uppercase tracking-[0.25em] text-muted-foreground",
+      "quote": "text-xl sm:text-2xl font-serif italic text-primary leading-snug"
+    }
+  },
+  "visual_enhancers": {
+    "grain_overlay": "bg-[radial-gradient(#1a1d20_1px,transparent_1px)] [background-size:24px_24px] opacity-[0.03]",
+    "book_spotlight_frame": "relative rounded-lg p-1 bg-gradient-to-b from-amber-100/60 via-stone-200/40 to-stone-900/10 shadow-[0_25px_60px_-15px_rgba(0,0,0,0.15)] hover:shadow-[0_35px_80px_-20px_rgba(200,90,50,0.25)] transition-all duration-500",
+    "glass_header": "bg-[#FDFBF7]/85 backdrop-blur-md border-b border-[#E6E1D7]/80",
+    "glass_card": "bg-[#F4EFE6]/70 backdrop-blur-sm border border-[#E6E1D7]/90 shadow-sm hover:border-[#1A1D20]/30 transition-all duration-300",
+    "dark_contrast_footer": "bg-[#12161A] text-[#F9F8F6] border-t border-[#2A3038]",
+    "amazon_button_style": "inline-flex items-center justify-center gap-3 px-6 py-3.5 bg-[#1A1D20] text-[#FDFBF7] font-sans font-medium rounded-full hover:bg-[#C85A32] hover:shadow-lg transition-all duration-300 transform active:scale-[0.98]"
+  },
+  "key_features_and_flows": [
+    "Kinetic Hero section with masked line-by-line reveal, dual CTA (Book Speaking & Explore Books), and signature interactive 3D parallax book depth.",
+    "Amazon Buy-Button Integration with product landing modal/direct affiliate link outs, multiple buy options (Amazon Hardcover, Amazon Kindle, Audible, Signed Copy).",
+    "Slow Editorial Marquee component displaying high-impact testimonials, featured press (Forbes, NYT, Harvard Business Review, Wall Street Journal), and core themes.",
+    "Numbered Manifesto Chapters (e.g., '01 / Purpose Over Velocity', '02 / The Courage to Speak', '03 / Deep Work in a Distracted Era') presented with Swiss-grid bento rhythm.",
+    "Dedicated Speaking & Video Gallery page featuring YouTube video modals, keynote topic summaries, audience testimonials, and event booking enquiry triggers.",
+    "Interactive Contact & Booking Enquiry form with datepicker, event location, audience size, and instant confirmation toast.",
+    "Built-in Admin Enquiry Management Drawer/Page to review, filter, search, and manage submitted speaking & media bookings.",
+    "Scalable navigation supporting 3 main core pages (Home, About, Books/Writing) plus Speaking/Videos and Contact/Admin."
+  ],
+  "pages_blueprint": {
+    "Home": {
+      "sections": [
+        "1. Fixed Kinetic Header with logo lockup, navigation links, theme toggle, and 'Book Keynote' CTA button.",
+        "2. Kinetic Hero: Masked line-by-line reveal animation ('Bestselling Author, Keynote Speaker & Writer'), 3D parallax hero image framing, social proof metrics counter (500+ Keynotes, 3 Bestselling Books, 1M+ Readers).",
+        "3. Editorial Marquee: Slow-drifting ribbon featuring press quotes ('A transformative voice for modern leadership' — Wall Street Journal).",
+        "4. Bestselling Book Spotlight: Feature card for newest book ('The Architecture of Intent'), Amazon Buy Button, clipped spotlight frame, interactive chapter sampler preview modal.",
+        "5. Numbered Manifesto: 4 interactive cards with hover expansion, quotes, and deep insights.",
+        "6. Speaking & Keynote Reel Preview: YouTube video player thumbnail, topic cards ('Leading in Uncertainty', 'The Written Mind', 'Digital Quiet'), direct link to Videos page.",
+        "7. Press & Endorsements Grid: Quotes from industry leaders, book reviewers, and conference organizers.",
+        "8. High-contrast Editorial CTA & Footer."
+      ]
+    },
+    "About": {
+      "sections": [
+        "1. Hero Header: 'The Writer's Journey' with warm author portrait and signature line.",
+        "2. Biographic Timeline: Chronological chapter markers ('2015 - The First Manuscript', '2019 - International Keynotes', '2024 - Global Impact').",
+        "3. Core Philosophy & Pillars: Grid with asymmetric spacing highlighting core values.",
+        "4. Media Kit & Press Assets: Downloadable high-res portraits, speaker intro bio, and topic sheets.",
+        "5. Call to Action for Speaking & Advisory."
+      ]
+    },
+    "Books_Writing": {
+      "sections": [
+        "1. Hero Header: 'Published Works & Monographs'.",
+        "2. Featured Book Catalog: Detailed cards for 3 core titles ('The Architecture of Intent', 'Silent Resonance', 'Mastering the Unspoken'). Each title includes: Amazon buy buttons, audio excerpt sample, sample chapter preview, and awards list.",
+        "3. Reader Reviews & Critical Acclaim: Filterable tabbed reviews.",
+        "4. Articles & Essays Archive: Searchable list of written pieces with reading time tags."
+      ]
+    },
+    "Speaking_Videos": {
+      "sections": [
+        "1. Hero Header: 'Keynote & Stage Presentations'.",
+        "2. Video Gallery Grid: 4+ YouTube embed videos (e.g., TEDx presentation, Global Leadership Summit keynote, Author Q&A interview) with interactive lightboxes.",
+        "3. Keynote Topics & Custom Workshops: Detailed breakdown of 3 flagship keynote talks.",
+        "4. Speaker Logistics & Rider Info: Interactive accordions covering travel, AV requirements, and recording rights.",
+        "5. Direct Booking Enquiry Form trigger."
+      ]
+    },
+    "Contact_Admin": {
+      "sections": [
+        "1. Public Booking Enquiry Form: Inputs for Name, Organization, Event Date, Event Location, Audience Size, Preferred Keynote Topic, Budget Range, and Message.",
+        "2. Admin Booking Management View: Accessible via admin drawer/toggle, displaying received enquiries with status tags (New, Contacted, Confirmed, Archived), search, and filter options."
+      ]
+    }
+  },
+  "image_urls": {
+    "author_hero_portrait": "https://images.unsplash.com/photo-1715412507413-c7416b47cacb?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1MTN8MHwxfHNlYXJjaHwzfHx0aG91Z2h0ZnVsJTIwcG9ydHJhaXQlMjB3cml0ZXIlMjBzcGVha2VyJTIwbWFuJTIwZ2xhc3NlcyUyMHBvcnRyYWl0fGVufDB8fHx8MTc4ODc5MjAwOHww&ixlib=rb-4.1.0&q=85",
+    "author_about_portrait": "https://images.pexels.com/photos/27471477/pexels-photo-27471477.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "speaker_stage_hero": "https://images.unsplash.com/photo-1540575467063-178a50c2df87",
+    "speaker_stage_keynote": "https://images.unsplash.com/photo-1594122230689-45899d9e6f69",
+    "speaker_audience_bw": "https://images.unsplash.com/photo-1435686858161-59da32dfd4b4",
+    "book_cover_desk": "https://images.unsplash.com/photo-1513185041617-8ab03f83d6c5?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAzNzl8MHwxfHNlYXJjaHwxfHxib29rJTIwY292ZXIlMjByZWFkaW5nJTIwYWVzdGhldGljJTIwZGVzayUyMHdhcm18ZW58MHx8fHwxNzg4NzkyMDAyfDA&ixlib=rb-4.1.0&q=85",
+    "book_reading_warm": "https://images.unsplash.com/photo-1697029749544-ffa7f15f9dd0?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAzNzl8MHwxfHNlYXJjaHwzfHxib29rJTIwY292ZXIlMjByZWFkaW5nJTIwYWVzdGhldGljJTIwZGVzayUyMHdhcm18ZW58MHx8fHwxNzg4NzkyMDAyfDA&ixlib=rb-4.1.0&q=85",
+    "journal_fountain_pen": "https://images.unsplash.com/photo-1764087957302-ef0756ed8e0a?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAzNTl8MHwxfHNlYXJjaHw0fHxhdXRob3IlMjB3cml0ZXIlMjB3cml0aW5nJTIwam91cm5hbCUyMGZvdW50YWluJTIwcGVufGVufDB8fHx8MTc4ODc5MjAwMnww&ixlib=rb-4.1.0&q=85"
+  },
+  "instructions_to_main_agent": [
+    "Load Google Fonts URL provided in typography section in public/index.html or index.css.",
+    "Use framer-motion for smooth staggered entrances, scroll-triggered line reveals, and modal animations.",
+    "Ensure Lenis smooth scrolling or smooth css scroll-behavior is initialized.",
+    "All Amazon buy buttons must feature clear Amazon icon/badge branding and open modal or direct link out with custom target='_blank'.",
+    "Ensure all interactive elements have data-testid attributes (e.g. data-testid='nav-books-link', data-testid='amazon-buy-button-book-1', data-testid='contact-form-submit').",
+    "Use Lucide React icons for crisp editorial iconography (e.g., BookOpen, Play, Calendar, Star, ArrowUpRight, ExternalLink, CheckCircle, Mail, Globe, Shield).",
+    "Create realistic seed data for the admin booking table with options to change enquiry status (Pending, Confirmed, Archived) and export or view enquiry details."
+  ],
+  "UNIVERSAL GUIDELINES FOR MAIN AGENT": [
+    "Dark colors look good when used independently without gradients. DO NOT use dark colors as gradients.",
+    "Don't make generic centered layouts, simplistic gradients, and uniform styling.",
+    "Create depth through layered design elements with z-index hierarchy.",
+    "Use glass-morphism effects with backdrop filters (12-24px blur).",
+    "You MUST NOT apply universal transition. Eg: transition: all. This results in breaking transforms. Always add transitions for specific interactive elements like button, input excluding transforms.",
+    "You MUST NOT center align the app container, ie do not add .App { text-align: center; } in the css file. This disrupts the human natural reading flow of text.",
+    "Always use modern button styles like pill-shaped, or sharp button with interaction animations & color relevant to the app style.",
+    "NEVER: use AI assistant Emoji characters like 🤖🧠💭💡🔮🎯 etc for icons.",
+    "Every interaction needs micro-animations - hover states, transitions, parallax effects, and entrance animations. Static = dead.",
+    "Use 2-3x more spacing than feels comfortable. Cramped designs look cheap.",
+    "Subtle grain textures, noise overlays, custom cursors, selection states, and loading animations: separates good from extraordinary.",
+    "All interactive and key informational elements MUST include data-testid attribute."
+  ]
+}
