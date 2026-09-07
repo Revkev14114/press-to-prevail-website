@@ -65,14 +65,14 @@ export default function About() {
             </Reveal>
           </div>
           <Reveal delay={0.2}>
-            <div className="relative mx-auto max-w-md">
+            <div className="relative mx-auto max-w-sm">
               <div className="absolute -right-4 -top-4 h-full w-full rounded-lg border border-gold/40" />
               <div className="relative overflow-hidden rounded-lg shadow-[0_35px_80px_-25px_rgba(0,0,0,0.7)] ring-1 ring-white/10">
                 <img
                   src="/assets/kevin-johnson.jpg"
-                  alt="Kevin Johnson — Builder, Author, Speaker, Teacher"
+                  alt="Kevin Johnson at his desk — Builder, Author, Speaker, Teacher"
                   data-testid="about-portrait"
-                  className="aspect-[4/5] w-full object-cover"
+                  className="w-full"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-night/70 via-transparent to-transparent" />
                 <p className="absolute bottom-5 left-5 font-mono text-[10px] uppercase tracking-[0.25em] text-[#F9F8F6]/70">
