@@ -146,7 +146,7 @@ export const KEYNOTES = [
 ];
 
 export const TIMELINE = [
-  { year: "1983", title: "The First Foundation", body: "A homebuilding career begins — one poured footing, one framed wall, one family at a time. Forty years of lessons start stacking up." },
+  { year: "1985", title: "The First Foundation", body: "A homebuilding career begins — one poured footing, one framed wall, one family at a time. Forty years of lessons start stacking up." },
   { year: "2015", title: "Notes Became Chapters", body: "Decades of job-site wisdom and quiet-time journaling begin taking shape as something more: a blueprint for building lives, not just houses." },
   { year: "2025", title: "Building the Perfect Home", body: "The flagship book launches — connecting 40+ years of homebuilding experience with timeless biblical principles." },
   { year: "Next", title: "The Coaching Practice", body: "Small cohorts for people ready to stop patching and start rebuilding — faith, foundation, focus, finish." },
