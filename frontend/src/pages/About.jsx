@@ -66,9 +66,6 @@ export default function About() {
                   className="w-full"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-night/70 via-transparent to-transparent" />
-                <p className="absolute bottom-5 left-5 font-mono text-[10px] uppercase tracking-[0.25em] text-[#F9F8F6]/70">
-                  40+ Years on the Job Site
-                </p>
               </div>
             </div>
           </Reveal>
