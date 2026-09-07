@@ -69,7 +69,7 @@ export default function Header() {
         <button
           data-testid="nav-mobile-menu-btn"
           onClick={() => setOpen(!open)}
-          className="flex h-10 w-10 items-center justify-center border border-white/15 text-[#F9F8F6] md:hidden"
+          className="flex h-10 w-10 items-center justify-center border border-white/15 text-[#F9F8F6] lg:hidden"
           aria-label="Toggle menu"
         >
           {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
@@ -84,7 +84,7 @@ export default function Header() {
             animate={{ height: "auto", opacity: 1 }}
             exit={{ height: 0, opacity: 0 }}
             transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
-            className="overflow-hidden border-t border-white/10 bg-night md:hidden"
+            className="overflow-hidden border-t border-white/10 bg-night lg:hidden"
           >
             <div className="flex flex-col gap-1 px-6 py-5">
               {NAV.map((item) => (
