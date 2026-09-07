@@ -15,7 +15,7 @@ from motor.motor_asyncio import AsyncIOMotorClient
 from pydantic import BaseModel, Field, ConfigDict, EmailStr, BeforeValidator
 from starlette.middleware.cors import CORSMiddleware
 
-from emailer import notify_owner_of_enquiry, send_visitor_confirmation
+from emailer import notify_owner_of_enquiry, send_visitor_confirmation, send_subscriber_welcome
 
 mongo_url = os.environ['MONGO_URL']
 client = AsyncIOMotorClient(mongo_url)
@@ -172,6 +172,8 @@ async def create_subscriber(input: SubscriberCreate):
     subscriber = Subscriber(email=email, name=input.name, source=input.source)
     result = await db.subscribers.insert_one(subscriber.to_mongo())
     subscriber.id = str(result.inserted_id)
+    books_url = f"{os.environ.get('FRONTEND_URL', '')}/books"
+    asyncio.create_task(send_subscriber_welcome(subscriber.model_dump(), books_url))
     return subscriber.model_dump()
 
 

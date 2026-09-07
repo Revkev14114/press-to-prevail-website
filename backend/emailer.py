@@ -191,3 +191,38 @@ async def send_visitor_confirmation(enquiry: dict, site_url: str) -> None:
         '</td></tr></table></td></tr></table>'
     )
     await send_email(to=visitor_email, subject=subject, html=html)
+
+
+async def send_subscriber_welcome(subscriber: dict, books_url: str) -> None:
+    email = subscriber.get("email")
+    if not email or not EMAIL_KEY:
+        return
+    first_name = escape((subscriber.get("name") or "friend").split()[0])
+    subject = "Your chapter is unlocked — welcome to Press To Prevail"
+    html = (
+        '<table role="presentation" width="100%" cellpadding="0" cellspacing="0" '
+        'style="background:#0c0c0e;padding:32px 16px"><tr><td align="center">'
+        '<table role="presentation" width="560" cellpadding="0" cellspacing="0" '
+        'style="background:#12161a;border:1px solid #2a2c30;border-radius:12px;overflow:hidden">'
+        '<tr><td style="padding:24px 28px;border-bottom:1px solid #2a2c30">'
+        '<p style="margin:0;font-family:Georgia,serif;font-size:22px;color:#f4f1ea">Press To Prevail</p>'
+        '<p style="margin:6px 0 0;font-family:Arial,sans-serif;font-size:11px;letter-spacing:3px;'
+        'text-transform:uppercase;color:#c9a227">Faith · Foundation · Focus · Finish</p></td></tr>'
+        f'<tr><td style="padding:28px;font-family:Arial,sans-serif">'
+        f'<p style="margin:0;font-size:15px;line-height:1.6;color:#f4f1ea">Welcome, {first_name}.</p>'
+        f'<p style="margin:16px 0 0;font-size:15px;line-height:1.6;color:#c9c4b8">'
+        f'Your free preview of <em>Building the Perfect Home</em> is unlocked — the Introduction '
+        f'and Chapter One are yours to read right now.</p>'
+        f'<p style="margin:16px 0 0;font-size:15px;line-height:1.6;color:#c9c4b8">'
+        f'One line from the book to carry with you: <em style="color:#c9a227">the setbacks in your '
+        f'life are not the interruptions to the story. They are the story.</em></p>'
+        f'<p style="margin:24px 0 0"><a href="{books_url}" style="display:inline-block;background:#c9a227;'
+        f'color:#0c0c0e;font-size:13px;font-weight:bold;text-decoration:none;padding:12px 22px;'
+        f'border-radius:999px">Start Reading</a></p></td></tr>'
+        '<tr><td style="padding:20px 28px;border-top:1px solid #2a2c30">'
+        '<p style="margin:0;font-family:Arial,sans-serif;font-size:11px;color:#8a8577">'
+        'You received this because you unlocked the free chapter at Press To Prevail. '
+        'We never ask for your password or card details by email.</p>'
+        '</td></tr></table></td></tr></table>'
+    )
+    await send_email(to=email, subject=subject, html=html)
