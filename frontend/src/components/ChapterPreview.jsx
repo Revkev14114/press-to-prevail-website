@@ -39,12 +39,15 @@ function ReaderGate({ onUnlock }) {
         <BookOpen className="h-6 w-6" />
       </span>
       <h3 className="mt-6 font-display text-3xl uppercase tracking-[0.04em] text-[#F9F8F6] sm:text-4xl">
-        Read Chapter One — <span className="text-gold">Free</span>
+        Ready to see <span className="text-gold">what's inside?</span>
       </h3>
-      <p className="mt-4 max-w-sm text-sm leading-relaxed text-stone2">
-        The full Introduction and Chapter One, straight from the book. Leave your email and it's
-        yours — you'll also be first to hear about new chapters, talks and the coaching cohort.
+      <p className="mt-4 max-w-md text-sm leading-relaxed text-stone2 sm:text-base">
+        The journey begins with the Introduction and Chapter One. I'd love to give you a first
+        look — on me. Tell me where to send it, and I'll deliver Chapter One straight to your
+        inbox. And if you enjoy the journey, I'll keep you in the loop when new chapters and
+        insights are released.
       </p>
+      <p className="mt-3 font-serif text-sm italic text-gold/80">— Kevin Johnson</p>
       <form data-testid="reader-gate-form" onSubmit={submit} className="mt-8 w-full max-w-sm space-y-3">
         <input
           data-testid="reader-gate-name"
@@ -67,9 +70,9 @@ function ReaderGate({ onUnlock }) {
           type="submit"
           data-testid="reader-gate-submit"
           disabled={sending}
-          className="inline-flex w-full items-center justify-center gap-2 rounded-full bg-gold px-6 py-3.5 text-sm font-semibold text-night transition-colors duration-300 hover:bg-goldlight disabled:opacity-60"
+          className="inline-flex w-full items-center justify-center gap-2 rounded-full bg-gold px-6 py-3.5 text-sm font-semibold uppercase tracking-[0.08em] text-night transition-colors duration-300 hover:bg-goldlight disabled:opacity-60"
         >
-          {sending ? "Unlocking…" : "Unlock the Chapter"} <Mail className="h-4 w-4" />
+          {sending ? "Unlocking…" : "Start the Journey"} <Mail className="h-4 w-4" />
         </button>
       </form>
       <p className="mt-5 inline-flex items-center gap-1.5 font-mono text-[10px] uppercase tracking-[0.2em] text-stone2/50">
