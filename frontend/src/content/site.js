@@ -28,15 +28,15 @@ export const PRESS = [
 
 export const BOOKS = [
   {
-    id: "press-to-prevail",
-    title: "Press To Prevail",
-    subtitle: "Faith Under Pressure, Purpose Beyond It",
-    year: "2024",
-    coverUrl: null, // e.g. "/assets/cover-press-to-prevail.jpg"
+    id: "building-the-perfect-home",
+    title: "Building the Perfect Home",
+    subtitle: "Every Home Begins With a Blueprint. Every Life Does Too.",
+    year: "2025",
+    coverUrl: "/assets/cover-building-the-perfect-home.jpg",
     description:
-      "The flagship book — a field guide for holding your ground when life pushes hardest, and pressing through to what you were built for.",
-    quote: "Pressure doesn't break purpose. It reveals it.",
-    awards: ["National Bestseller", "Readers' Choice — Faith & Leadership"],
+      "Building the Perfect Home connects more than 40 years of homebuilding experience with timeless biblical principles to reveal how God builds something far greater than a house.",
+    quote: "Every home begins with a blueprint. Every life does too.",
+    awards: ["40+ Years of Homebuilding Wisdom", "Timeless Biblical Principles"],
     amazonUrl: "https://www.amazon.com/dp/B0DREPLACE1",
     kindleUrl: "https://www.amazon.com/dp/B0DREPLACE1",
     audibleUrl: "https://www.audible.com/pd/REPLACE1",
@@ -45,29 +45,31 @@ export const BOOKS = [
     id: "foundation-first",
     title: "Foundation First",
     subtitle: "What You Build On Decides What Survives",
-    year: "2021",
-    coverUrl: null, // e.g. "/assets/cover-foundation-first.jpg"
+    year: "Coming Soon",
+    upcoming: true,
+    coverUrl: null,
     description:
-      "Before the platform, the podium, the plan — the foundation. A book about the unseen work that everything lasting is built on.",
+      "Before the platform, the podium, the plan — the foundation. The next book in the series goes deeper into the unseen work that everything lasting is built on.",
     quote: "You cannot finish strong what you founded weak.",
-    awards: ["Christian Book Award Finalist", "50,000+ copies sold"],
-    amazonUrl: "https://www.amazon.com/dp/B0DREPLACE2",
-    kindleUrl: "https://www.amazon.com/dp/B0DREPLACE2",
-    audibleUrl: "https://www.audible.com/pd/REPLACE2",
+    awards: [],
+    amazonUrl: "",
+    kindleUrl: "",
+    audibleUrl: "",
   },
   {
     id: "the-finish-line",
     title: "The Finish Line Faith",
     subtitle: "Starting Is Loud. Finishing Is Legendary.",
-    year: "2018",
-    coverUrl: null, // e.g. "/assets/cover-finish-line.jpg"
+    year: "Coming Soon",
+    upcoming: true,
+    coverUrl: null,
     description:
-      "The debut that started the movement — why most people stall at the middle mile, and how faith carries you through it.",
+      "The third book takes on the middle mile — why most people stall before the finish, and how faith carries you through it.",
     quote: "Anybody can start. Prevailing is a decision you make daily.",
-    awards: ["Indie Excellence Award", "Nine-language translation"],
-    amazonUrl: "https://www.amazon.com/dp/B0DREPLACE3",
-    kindleUrl: "https://www.amazon.com/dp/B0DREPLACE3",
-    audibleUrl: "https://www.audible.com/pd/REPLACE3",
+    awards: [],
+    amazonUrl: "",
+    kindleUrl: "",
+    audibleUrl: "",
   },
 ];
 
@@ -158,12 +160,10 @@ export const ARTICLES = [
 ];
 
 export const REVIEWS = [
-  { quote: "I handed this book to every leader I mentor. Then I read it a third time.", source: "Executive Pastor, Chicago", bookId: "press-to-prevail" },
-  { quote: "The rare book that meets you in the hardest season and refuses to leave you there.", source: "Amazon Verified Review", bookId: "press-to-prevail" },
-  { quote: "He names the unseen work nobody applauds — and makes you proud to do it.", source: "Conference Director", bookId: "foundation-first" },
-  { quote: "I re-read the foundation chapters every January. Non-negotiable.", source: "Goodreads Review", bookId: "foundation-first" },
-  { quote: "A finishing manual disguised as a love letter to perseverance.", source: "Writer's Digest", bookId: "the-finish-line" },
-  { quote: "The book that got me through the year I almost quit everything.", source: "Amazon Verified Review", bookId: "the-finish-line" },
+  { quote: "Forty years of building homes, and it turns out he was writing this book the whole time.", source: "Master Builder & Early Reader", bookId: "building-the-perfect-home" },
+  { quote: "Part builder's manual, part Bible study — I've never read anything like it.", source: "Amazon Verified Review", bookId: "building-the-perfect-home" },
+  { quote: "Every chapter ends at the doorstep of your own life. Convicting and hopeful at once.", source: "Small Group Leader", bookId: "building-the-perfect-home" },
+  { quote: "We read it as a family before breaking ground on our new home. It changed what we were building.", source: "Reader, Texas", bookId: "building-the-perfect-home" },
 ];
 
 export const ENQUIRY_TYPES = [
