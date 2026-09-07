@@ -7,6 +7,9 @@ import Footer from "./components/Footer";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Books from "./pages/Books";
+import Speaking from "./pages/Speaking";
+import Consulting from "./pages/Consulting";
+import Contact from "./pages/Contact";
 import Admin from "./pages/Admin";
 
 function ScrollManager() {
@@ -42,6 +45,9 @@ function Shell() {
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/books" element={<Books />} />
+          <Route path="/speaking" element={<Speaking />} />
+          <Route path="/consulting" element={<Consulting />} />
+          <Route path="/contact" element={<Contact />} />
           <Route path="/admin" element={<Admin />} />
         </Routes>
       </main>

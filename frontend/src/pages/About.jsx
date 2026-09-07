@@ -1,9 +1,7 @@
-import { useEffect } from "react";
-import { useLocation } from "react-router-dom";
-import { Mic2, PenLine, Compass, Sparkles, Download } from "lucide-react";
-import { SITE, TIMELINE, KEYNOTES } from "../content/site";
+import { Mic2, PenLine, Compass, Sparkles, Download, ArrowRight } from "lucide-react";
+import { Link } from "react-router-dom";
+import { SITE, TIMELINE } from "../content/site";
 import { Reveal, MaskedLine } from "../components/Motion";
-import VideoGallery from "../components/VideoGallery";
 import EnquiryForm from "../components/EnquiryForm";
 
 const PILLARS = [
@@ -14,13 +12,6 @@ const PILLARS = [
 ];
 
 export default function About() {
-  const { hash } = useLocation();
-  useEffect(() => {
-    if (hash === "#speaking") {
-      setTimeout(() => document.getElementById("speaking")?.scrollIntoView({ behavior: "smooth" }), 400);
-    }
-  }, [hash]);
-
   return (
     <div data-testid="about-page" className="bg-night text-[#F9F8F6]">
       {/* HERO */}
@@ -216,39 +207,26 @@ export default function About() {
         </Reveal>
       </section>
 
-      {/* SPEAKING & VIDEOS */}
-      <section id="speaking" data-testid="speaking-section" className="border-y border-white/10 bg-[#101013] py-24 lg:py-32">
-        <div className="mx-auto max-w-7xl px-6 lg:px-10">
+      {/* SPEAKING TEASER */}
+      <section data-testid="speaking-teaser" className="border-y border-white/10 bg-[#101013] py-16 lg:py-20">
+        <div className="mx-auto flex max-w-7xl flex-col items-start justify-between gap-6 px-6 sm:flex-row sm:items-center lg:px-10">
           <Reveal>
-            <span className="inline-flex items-center gap-3 font-mono text-xs uppercase tracking-[0.28em] text-gold">
-              <span className="h-px w-8 bg-gold" />
-              Speaking & Videos
-            </span>
-            <h2 className="mt-5 max-w-2xl font-display text-4xl uppercase leading-[0.95] tracking-[0.03em] sm:text-5xl">
-              Watch the work <span className="text-gold">in the room.</span>
+            <h2 className="font-display text-3xl uppercase leading-[0.95] tracking-[0.03em] sm:text-4xl">
+              Watch Kevin <span className="text-gold">in the room.</span>
             </h2>
-            <p className="mt-6 max-w-xl text-base leading-relaxed text-stone2/90">
-              Keynotes, church talks and interviews — a sample of recent footage.
-              Click any talk to watch.
+            <p className="mt-3 max-w-xl text-sm leading-relaxed text-stone2/90">
+              Keynotes, church talks and interviews — the full reel and flagship topics now live on the Speaking page.
             </p>
           </Reveal>
-
-          <div className="mt-14">
-            <VideoGallery dark />
-          </div>
-
-          <div className="mt-20 grid gap-px overflow-hidden rounded-lg border border-white/10 bg-white/10 md:grid-cols-3">
-            {KEYNOTES.map((k, i) => (
-              <Reveal key={k.title} delay={i * 0.08}>
-                <div data-testid={`keynote-topic-${i}`} className="flex h-full flex-col bg-night p-7">
-                  <span className="font-mono text-xs tracking-[0.25em] text-gold">0{i + 1}</span>
-                  <h3 className="mt-4 font-display text-xl uppercase tracking-[0.06em]">{k.title}</h3>
-                  <p className="mt-1 font-mono text-[10px] uppercase tracking-[0.2em] text-stone2/60">{k.length}</p>
-                  <p className="mt-4 text-sm leading-relaxed text-stone2/85">{k.body}</p>
-                </div>
-              </Reveal>
-            ))}
-          </div>
+          <Reveal delay={0.1}>
+            <Link
+              to="/speaking"
+              data-testid="about-speaking-link"
+              className="group inline-flex shrink-0 items-center gap-2 rounded-full bg-gold px-6 py-3 text-sm font-semibold text-night transition-colors duration-300 hover:bg-goldlight"
+            >
+              Visit Speaking <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
+            </Link>
+          </Reveal>
         </div>
       </section>
 

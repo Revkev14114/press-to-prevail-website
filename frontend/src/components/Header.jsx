@@ -6,8 +6,11 @@ import { SITE } from "../content/site";
 
 const NAV = [
   { to: "/", label: "Home", testId: "nav-home-link" },
+  { to: "/speaking", label: "Speaking", testId: "nav-speaking-link" },
+  { to: "/books", label: "The Book", testId: "nav-book-link" },
   { to: "/about", label: "About", testId: "nav-about-link" },
-  { to: "/books", label: "Books & Writing", testId: "nav-books-link" },
+  { to: "/consulting", label: "Consulting", testId: "nav-consulting-link" },
+  { to: "/contact", label: "Contact", testId: "nav-contact-link" },
 ];
 
 export const scrollToEnquire = (navigate, pathname) => {
@@ -22,13 +25,6 @@ export const scrollToEnquire = (navigate, pathname) => {
 
 export default function Header() {
   const [open, setOpen] = useState(false);
-  const navigate = useNavigate();
-  const location = useLocation();
-
-  const onBook = () => {
-    setOpen(false);
-    scrollToEnquire(navigate, location.pathname);
-  };
 
   return (
     <header data-testid="site-header" className="fixed inset-x-0 top-0 z-50 border-b border-white/10 bg-night/85 backdrop-blur-md">
@@ -45,7 +41,7 @@ export default function Header() {
           </span>
         </Link>
 
-        <nav className="hidden items-center gap-9 md:flex">
+        <nav className="hidden items-center gap-7 lg:flex">
           {NAV.map((item) => (
             <NavLink
               key={item.to}
@@ -60,14 +56,14 @@ export default function Header() {
               {item.label}
             </NavLink>
           ))}
-          <button
-            onClick={onBook}
-            data-testid="nav-book-keynote-btn"
+          <Link
+            to="/contact"
+            data-testid="nav-lets-connect-btn"
             className="group inline-flex items-center gap-2 rounded-full bg-gold px-5 py-2.5 text-sm font-semibold text-night transition-colors duration-300 hover:bg-goldlight"
           >
-            Book a Keynote
+            Let's Connect
             <ArrowUpRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
-          </button>
+          </Link>
         </nav>
 
         <button
@@ -101,13 +97,14 @@ export default function Header() {
                   {item.label}
                 </NavLink>
               ))}
-              <button
-                onClick={onBook}
+              <Link
+                to="/contact"
+                onClick={() => setOpen(false)}
                 data-testid="nav-mobile-book-btn"
                 className="mt-3 inline-flex items-center justify-center gap-2 rounded-full bg-gold px-5 py-3 text-sm font-semibold text-night"
               >
-                Book a Keynote <ArrowUpRight className="h-4 w-4" />
-              </button>
+                Let's Connect <ArrowUpRight className="h-4 w-4" />
+              </Link>
             </div>
           </motion.nav>
         )}

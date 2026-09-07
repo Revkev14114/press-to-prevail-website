@@ -25,8 +25,11 @@ export default function Footer() {
             <p className="font-mono text-[11px] uppercase tracking-[0.25em] text-[#F9F8F6]/40">Explore</p>
             <ul className="mt-5 space-y-3 text-sm">
               <li><Link data-testid="footer-home-link" to="/" className="text-[#F9F8F6]/70 transition-colors duration-300 hover:text-gold">Home</Link></li>
-              <li><Link data-testid="footer-about-link" to="/about" className="text-[#F9F8F6]/70 transition-colors duration-300 hover:text-gold">About & Speaking</Link></li>
-              <li><Link data-testid="footer-books-link" to="/books" className="text-[#F9F8F6]/70 transition-colors duration-300 hover:text-gold">Books & Writing</Link></li>
+              <li><Link data-testid="footer-speaking-link" to="/speaking" className="text-[#F9F8F6]/70 transition-colors duration-300 hover:text-gold">Speaking</Link></li>
+              <li><Link data-testid="footer-books-link" to="/books" className="text-[#F9F8F6]/70 transition-colors duration-300 hover:text-gold">The Book</Link></li>
+              <li><Link data-testid="footer-about-link" to="/about" className="text-[#F9F8F6]/70 transition-colors duration-300 hover:text-gold">About</Link></li>
+              <li><Link data-testid="footer-consulting-link" to="/consulting" className="text-[#F9F8F6]/70 transition-colors duration-300 hover:text-gold">Consulting</Link></li>
+              <li><Link data-testid="footer-contact-link" to="/contact" className="text-[#F9F8F6]/70 transition-colors duration-300 hover:text-gold">Contact</Link></li>
               <li><Link data-testid="footer-admin-link" to="/admin" className="text-[#F9F8F6]/40 transition-colors duration-300 hover:text-gold">Admin</Link></li>
             </ul>
           </div>

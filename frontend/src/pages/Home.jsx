@@ -241,7 +241,7 @@ export default function Home() {
             </div>
             <Reveal delay={0.2}>
               <Link
-                to="/about#speaking"
+                to="/speaking"
                 data-testid="speaking-reel-link"
                 className="group mt-8 inline-flex items-center gap-2 text-sm font-medium text-gold"
               >

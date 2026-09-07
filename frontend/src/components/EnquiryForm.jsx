@@ -72,7 +72,7 @@ export default function EnquiryForm({ compact = false }) {
           <div className="mt-10 space-y-4 font-mono text-xs uppercase tracking-[0.2em] text-[#F9F8F6]/50">
             <p>Response — within 48 hours</p>
             <p>Formats — keynote · workshop · panel · podcast</p>
-            <p>Travel — worldwide, based in Chicago</p>
+            <p>Travel — worldwide booking</p>
           </div>
         </Reveal>
 
