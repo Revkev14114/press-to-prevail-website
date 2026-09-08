@@ -4,13 +4,13 @@ import { Play, X } from "lucide-react";
 import { VIDEOS } from "../content/site";
 import { Reveal } from "./Motion";
 
-export default function VideoGallery({ limit, dark = false }) {
+export default function VideoGallery({ limit, dark = false, compact = false }) {
   const [active, setActive] = useState(null);
   const videos = limit ? VIDEOS.slice(0, limit) : VIDEOS;
 
   return (
     <>
-      <div className="grid gap-8 sm:grid-cols-2">
+      <div className={compact ? "grid grid-cols-2 gap-4 lg:grid-cols-4" : "grid gap-8 sm:grid-cols-2"}>
         {videos.map((video, i) => (
           <Reveal key={video.id} delay={i * 0.08}>
             <button
@@ -25,20 +25,22 @@ export default function VideoGallery({ limit, dark = false }) {
                   className="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.04]"
                 />
                 <div className="absolute inset-0 bg-coal/35 transition-colors duration-500 group-hover:bg-coal/20" />
-                <span className="absolute left-1/2 top-1/2 flex h-16 w-16 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full bg-ivory/95 shadow-xl transition-transform duration-500 group-hover:scale-110 group-hover:bg-terracotta group-hover:text-ivory">
-                  <Play className="ml-1 h-6 w-6" fill="currentColor" />
+                <span className={`absolute left-1/2 top-1/2 flex -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full bg-ivory/95 shadow-xl transition-transform duration-500 group-hover:scale-110 group-hover:bg-gold group-hover:text-night ${compact ? "h-10 w-10" : "h-16 w-16"}`}>
+                  <Play className={`${compact ? "ml-0.5 h-4 w-4" : "ml-1 h-6 w-6"}`} fill="currentColor" />
                 </span>
                 <span className="absolute bottom-3 right-3 rounded-full bg-coal/80 px-2.5 py-1 font-mono text-[10px] tracking-widest text-ivory">
                   {video.duration}
                 </span>
               </div>
-              <div className="mt-4">
-                <p className={`font-serif text-lg font-semibold tracking-tight ${dark ? "text-[#F9F8F6]" : "text-ink"}`}>
+              <div className={compact ? "mt-2.5" : "mt-4"}>
+                <p className={`font-serif font-semibold tracking-tight ${compact ? "text-sm" : "text-lg"} ${dark ? "text-[#F9F8F6]" : "text-ink"}`}>
                   {video.title}
                 </p>
-                <p className={`mt-1 font-mono text-[11px] uppercase tracking-[0.2em] ${dark ? "text-[#F9F8F6]/50" : "text-muted2"}`}>
-                  {video.event}
-                </p>
+                {!compact && (
+                  <p className={`mt-1 font-mono text-[11px] uppercase tracking-[0.2em] ${dark ? "text-[#F9F8F6]/50" : "text-muted2"}`}>
+                    {video.event}
+                  </p>
+                )}
               </div>
             </button>
           </Reveal>

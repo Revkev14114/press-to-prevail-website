@@ -76,38 +76,59 @@ export default function Speaking() {
             backgroundSize: "56px 56px",
           }}
         />
-        <div className="relative mx-auto max-w-7xl">
-          <Reveal>
-            <span className="inline-flex items-center gap-3 font-mono text-xs uppercase tracking-[0.28em] text-gold">
-              <span className="h-px w-8 bg-gold" />
-              Speaking
-            </span>
-          </Reveal>
-          <h1 className="mt-6 font-display uppercase leading-[0.95] tracking-[0.02em]">
-            <MaskedLine delay={0.15} className="text-5xl sm:text-7xl lg:text-8xl">
-              Keynotes that build
-            </MaskedLine>
-            <MaskedLine delay={0.3} className="text-5xl sm:text-7xl lg:text-8xl">
-              <span className="text-gold">something that lasts.</span>
-            </MaskedLine>
-          </h1>
-          <Reveal delay={0.45}>
-            <p className="mt-8 max-w-2xl text-base font-light leading-relaxed text-stone2 sm:text-lg">
-              Forty years of job sites and a lifetime in God's Word — delivered from the stage with
-              the same straight talk you'd get across a kitchen table. Watch the reel, pick a topic,
-              and let's build your event together.
-            </p>
+        <div className="relative mx-auto grid max-w-7xl items-center gap-14 lg:grid-cols-[1.02fr_0.98fr] lg:gap-16">
+          <div>
+            <Reveal>
+              <span className="inline-flex items-center gap-3 font-mono text-xs uppercase tracking-[0.28em] text-gold">
+                <span className="h-px w-8 bg-gold" />
+                Speaking
+              </span>
+            </Reveal>
+            <h1 className="mt-6 font-display uppercase leading-[0.95] tracking-[0.02em]">
+              <MaskedLine delay={0.15} className="text-5xl sm:text-6xl lg:text-7xl">
+                Keynotes that build
+              </MaskedLine>
+              <MaskedLine delay={0.3} className="text-5xl sm:text-6xl lg:text-7xl">
+                <span className="text-gold">something that lasts.</span>
+              </MaskedLine>
+            </h1>
+            <Reveal delay={0.45}>
+              <p className="mt-8 max-w-xl font-serif text-xl italic leading-snug text-gold/90 sm:text-2xl">
+                “His approach is simple. To take timeless truths and make them practical,
+                understandable, and impossible to ignore.”
+              </p>
+              <p className="mt-6 max-w-xl text-base font-light leading-relaxed text-stone2">
+                Watch a sample below, explore the flagship talks, and let's build your event together.
+              </p>
+            </Reveal>
+          </div>
+          <Reveal delay={0.2}>
+            <div className="relative">
+              <div className="absolute -right-4 -top-4 h-full w-full rounded-lg border border-gold/40" />
+              <div className="relative overflow-hidden rounded-lg shadow-[0_35px_80px_-25px_rgba(0,0,0,0.7)] ring-1 ring-white/10">
+                <img
+                  src="/assets/kevin-speaking.jpg"
+                  alt="Kevin Johnson speaking at the podium — Building the Perfect Home"
+                  data-testid="speaking-hero-photo"
+                  className="w-full"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-night/50 via-transparent to-transparent" />
+              </div>
+            </div>
           </Reveal>
         </div>
       </section>
 
-      {/* VIDEO REEL */}
-      <section className="mx-auto max-w-7xl px-6 pb-24 lg:px-10 lg:pb-32">
+      {/* VIDEO REEL — compact */}
+      <section className="mx-auto max-w-7xl px-6 pb-20 lg:px-10">
         <Reveal>
-          <h2 className="font-display text-3xl uppercase tracking-[0.04em] sm:text-4xl">The reel</h2>
+          <div className="flex items-end justify-between gap-6 border-b border-white/10 pb-4">
+            <h2 className="font-display text-2xl uppercase tracking-[0.04em] sm:text-3xl">The reel</h2>
+            <span className="font-mono text-[10px] uppercase tracking-[0.25em] text-stone2/60">Click any talk to watch</span>
+          </div>
         </Reveal>
-        <div className="mt-10">
-          <VideoGallery dark />
+        <div className="mt-8">
+          <VideoGallery dark compact />
         </div>
       </section>
 

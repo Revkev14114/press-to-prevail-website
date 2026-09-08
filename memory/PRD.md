@@ -32,7 +32,8 @@
 - Full rebrand to "Press To Prevail": user-supplied metallic emblem (logo + hero background), dark charcoal/stone/gold palette, Bebas Neue display type, gold buttons throughout
 - Home: parallax logo hero with banner "Building Faith, Building Purpose, Building Lives That Last", press marquee, featured-book spotlight (real cover), Four Pillars (Faith/Foundation/Focus/Finish), speaking preview, press quotes, enquiry form
 - Books: rebuilt around real book "Building the Perfect Home" (user cover + copy), blueprint-grid hero, "Inside the Blueprint" themes, early-reader reviews, two upcoming titles with Notify-Me, articles list
-- About: rebuilt dark/gold — "Built by Hand. Led by Faith." hero, 1983→Next timeline, pillars, media-kit CTA, Speaking & Videos section (4 YouTube embeds w/ lightbox)
+- About: Kevin Johnson bio ("Builder. Author. Speaker. Teacher."), real desk portrait, James 1:2-3 feature quote, 1985→Next timeline, pillars, media-kit CTA, teaser linking to Speaking
+- Five-page growth (2026-09-07): Speaking page (video reel, flagship talks, logistics accordions, booking form), Consulting page (coaching waitlist, workshops, church consulting, 4-step process), Contact page (info, full enquiry form, FAQ accordion). Nav: Home · Speaking · The Book · About · Consulting · Contact + gold "Let's Connect" CTA.
 - Enquiry form → POST /api/enquiries → MongoDB; Admin /admin (JWT cookie auth) with enquiry inbox + status management
 - Lenis smooth scroll, grain overlay, framer-motion reveals throughout
 - Amazon link LIVE (2026-09-07): buy buttons → https://www.amazon.com/dp/B0HFC1ZJ3P (Kindle uses bestFormat variant). Audible button hidden until audiobook exists. Signed copies stay on the enquiry form.
@@ -40,7 +41,7 @@
 - Chapter email capture (2026-09-07): reader gate before preview (email required, name optional) → POST /api/subscribers (idempotent by email+source) → MongoDB subscribers collection; localStorage unlock for returning readers; admin dashboard shows "Chapter readers" list with count; branded welcome email fires on first unlock only.
 - Still MOCKED: YouTube video IDs, press/review quotes, articles links, social links
 - Email alerts (2026-09-07): Resend via Emergent managed email — owner notification to kevin@presstoprevail.com + branded visitor confirmation on every enquiry (non-blocking, fire-and-forget). Reply-To set to kevin@presstoprevail.com.
-- Five-page growth (2026-09-07): Speaking page (video reel, flagship talks, logistics accordions, booking form), Consulting page (coaching waitlist, workshops, church consulting, 4-step process), Contact page (info, full enquiry form, FAQ accordion). Nav now: Home · Speaking · The Book · About · Consulting · Contact + gold "Let's Connect" CTA. About keeps a teaser linking to Speaking.
+- Speaking page redesign (2026-09-07): hero now features Kevin's podium photo (kevin-speaking.jpg, gold frame) + positioning line "His approach is simple. To take timeless truths and make them practical, understandable, and impossible to ignore."; reel reduced to compact 4-across strip.
 
 ## Backlog (prioritized)
 - P0: Swap in user's real brand — logo, name, colors, book covers, real Amazon product links, real YouTube IDs (all via src/content/site.js + image files in /public/assets/)
