@@ -61,9 +61,10 @@ export default function Consulting() {
           </h1>
           <Reveal delay={0.45}>
             <p className="mt-8 max-w-2xl text-base font-light leading-relaxed text-stone2 sm:text-lg">
-              Forty years of construction teaches you things a seminar never will: how to read a
-              foundation, where structures fail first, and why the details nobody sees decide
-              everything. That same eye now serves leaders, teams and ministries.
+              Forty years in homebuilding have taught me that what gets built on the inside
+              determines what stands on the outside. Along the way, I have seen where things begin
+              to break down, what helps make them stronger, and what it takes to build with purpose.
+              Now I bring that experience to leaders, teams, and ministries.
             </p>
           </Reveal>
         </div>
