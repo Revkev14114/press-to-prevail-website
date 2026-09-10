@@ -11,7 +11,7 @@ export default function Footer() {
             <div className="flex items-center gap-3">
               <img src={SITE.logoUrl} alt={`${SITE.name} logo`} className="h-12 w-12 rounded-md object-cover ring-1 ring-white/15" />
               <div className="leading-tight">
-                <p className="font-display text-2xl tracking-[0.08em]">{SITE.name}</p>
+                <p className="font-sans text-xl font-semibold tracking-wide">{SITE.name}</p>
                 <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-gold/80">{SITE.tagline}</p>
               </div>
             </div>

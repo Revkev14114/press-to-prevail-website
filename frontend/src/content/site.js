@@ -5,7 +5,7 @@
 // ─────────────────────────────────────────────────────────────
 
 export const SITE = {
-  name: "Press To Prevail",
+  name: "Press to Prevail",
   monogram: "PP",
   tagline: "Faith · Foundation · Focus · Finish",
   email: "connect@presstoprevail.com",

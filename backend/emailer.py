@@ -11,7 +11,7 @@ logger = logging.getLogger(__name__)
 
 EMAIL_BASE_URL = "https://integrations.emergentagent.com"
 EMAIL_KEY = os.environ.get("EMERGENT_EMAIL_KEY", "")
-EMAIL_FROM_NAME = os.environ.get("EMAIL_FROM_NAME", "Press To Prevail")
+EMAIL_FROM_NAME = os.environ.get("EMAIL_FROM_NAME", "Press to Prevail")
 EMAIL_REPLY_TO = os.environ.get("EMAIL_REPLY_TO")
 OWNER_EMAIL = os.environ.get("OWNER_EMAIL", "")
 
@@ -144,7 +144,7 @@ async def notify_owner_of_enquiry(enquiry: dict, admin_url: str) -> None:
         '<table role="presentation" width="560" cellpadding="0" cellspacing="0" '
         'style="background:#12161a;border:1px solid #2a2c30;border-radius:12px;overflow:hidden">'
         '<tr><td style="padding:24px 28px;border-bottom:1px solid #2a2c30">'
-        '<p style="margin:0;font-family:Georgia,serif;font-size:22px;color:#f4f1ea">Press To Prevail</p>'
+        '<p style="margin:0;font-family:Georgia,serif;font-size:22px;color:#f4f1ea">Press to Prevail</p>'
         '<p style="margin:6px 0 0;font-family:Arial,sans-serif;font-size:11px;letter-spacing:3px;'
         'text-transform:uppercase;color:#c9a227">New Website Enquiry</p></td></tr>'
         f'<tr><td style="padding:24px 28px"><table role="presentation" width="100%" '
@@ -154,7 +154,7 @@ async def notify_owner_of_enquiry(enquiry: dict, admin_url: str) -> None:
         f'font-family:Arial,sans-serif;font-size:13px;font-weight:bold;text-decoration:none;'
         f'padding:12px 22px;border-radius:999px">Open Enquiry Inbox</a>'
         f'<p style="margin:16px 0 0;font-family:Arial,sans-serif;font-size:11px;color:#8a8577">'
-        f'Sent by the Press To Prevail website. Faith. Foundation. Focus. Finish.</p>'
+        f'Sent by the Press to Prevail website. Faith. Foundation. Focus. Finish.</p>'
         '</td></tr></table></td></tr></table>'
     )
     await send_email(to=OWNER_EMAIL, subject=subject, html=html)
@@ -165,14 +165,14 @@ async def send_visitor_confirmation(enquiry: dict, site_url: str) -> None:
     if not visitor_email or not EMAIL_KEY:
         return
     first_name = escape((enquiry.get("name") or "there").split()[0])
-    subject = "We received your enquiry — Press To Prevail"
+    subject = "We received your enquiry — Press to Prevail"
     html = (
         '<table role="presentation" width="100%" cellpadding="0" cellspacing="0" '
         'style="background:#0c0c0e;padding:32px 16px"><tr><td align="center">'
         '<table role="presentation" width="560" cellpadding="0" cellspacing="0" '
         'style="background:#12161a;border:1px solid #2a2c30;border-radius:12px;overflow:hidden">'
         '<tr><td style="padding:24px 28px;border-bottom:1px solid #2a2c30">'
-        '<p style="margin:0;font-family:Georgia,serif;font-size:22px;color:#f4f1ea">Press To Prevail</p>'
+        '<p style="margin:0;font-family:Georgia,serif;font-size:22px;color:#f4f1ea">Press to Prevail</p>'
         '<p style="margin:6px 0 0;font-family:Arial,sans-serif;font-size:11px;letter-spacing:3px;'
         'text-transform:uppercase;color:#c9a227">Faith · Foundation · Focus · Finish</p></td></tr>'
         f'<tr><td style="padding:28px;font-family:Arial,sans-serif">'
@@ -184,10 +184,10 @@ async def send_visitor_confirmation(enquiry: dict, site_url: str) -> None:
         f'In the meantime: pressure doesn\'t have to defeat us. It can develop us.</p>'
         f'<p style="margin:24px 0 0"><a href="{site_url}" style="display:inline-block;background:#c9a227;'
         f'color:#0c0c0e;font-size:13px;font-weight:bold;text-decoration:none;padding:12px 22px;'
-        f'border-radius:999px">Visit Press To Prevail</a></p></td></tr>'
+        f'border-radius:999px">Visit Press to Prevail</a></p></td></tr>'
         '<tr><td style="padding:20px 28px;border-top:1px solid #2a2c30">'
         '<p style="margin:0;font-family:Arial,sans-serif;font-size:11px;color:#8a8577">'
-        'Sent by the Press To Prevail website. We never ask for your password or card details by email.</p>'
+        'Sent by the Press to Prevail website. We never ask for your password or card details by email.</p>'
         '</td></tr></table></td></tr></table>'
     )
     await send_email(to=visitor_email, subject=subject, html=html)
@@ -198,14 +198,14 @@ async def send_subscriber_welcome(subscriber: dict, books_url: str) -> None:
     if not email or not EMAIL_KEY:
         return
     first_name = escape((subscriber.get("name") or "friend").split()[0])
-    subject = "Your chapter is unlocked — welcome to Press To Prevail"
+    subject = "Your chapter is unlocked — welcome to Press to Prevail"
     html = (
         '<table role="presentation" width="100%" cellpadding="0" cellspacing="0" '
         'style="background:#0c0c0e;padding:32px 16px"><tr><td align="center">'
         '<table role="presentation" width="560" cellpadding="0" cellspacing="0" '
         'style="background:#12161a;border:1px solid #2a2c30;border-radius:12px;overflow:hidden">'
         '<tr><td style="padding:24px 28px;border-bottom:1px solid #2a2c30">'
-        '<p style="margin:0;font-family:Georgia,serif;font-size:22px;color:#f4f1ea">Press To Prevail</p>'
+        '<p style="margin:0;font-family:Georgia,serif;font-size:22px;color:#f4f1ea">Press to Prevail</p>'
         '<p style="margin:6px 0 0;font-family:Arial,sans-serif;font-size:11px;letter-spacing:3px;'
         'text-transform:uppercase;color:#c9a227">Faith · Foundation · Focus · Finish</p></td></tr>'
         f'<tr><td style="padding:28px;font-family:Arial,sans-serif">'
@@ -221,7 +221,7 @@ async def send_subscriber_welcome(subscriber: dict, books_url: str) -> None:
         f'border-radius:999px">Start Reading</a></p></td></tr>'
         '<tr><td style="padding:20px 28px;border-top:1px solid #2a2c30">'
         '<p style="margin:0;font-family:Arial,sans-serif;font-size:11px;color:#8a8577">'
-        'You received this because you unlocked the free chapter at Press To Prevail. '
+        'You received this because you unlocked the free chapter at Press to Prevail. '
         'We never ask for your password or card details by email.</p>'
         '</td></tr></table></td></tr></table>'
     )

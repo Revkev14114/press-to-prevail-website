@@ -66,8 +66,10 @@ function Hero() {
             transition={{ duration: 0.9, delay: 0.85 }}
           >
             <p className="max-w-lg text-base font-light leading-relaxed text-[#F9F8F6]/70 sm:text-lg">
-              {SITE.name} is a movement of books, keynotes and straight talk for people under
-              pressure — because the press was never the punishment. It's the path.
+              {SITE.name} is a movement of books, keynotes, and honest conversations for people
+              navigating the pressures of life. Pressure doesn't have to break us. It can shape us,
+              strengthen us, and move us forward. The press isn't the end of the story. It can be
+              the path to becoming who we are meant to be.
             </p>
             <div className="mt-8 flex flex-wrap items-center gap-4">
               <button

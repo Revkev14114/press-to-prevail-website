@@ -36,7 +36,7 @@ export default function Header() {
             className="h-11 w-11 rounded-md object-cover ring-1 ring-white/15 transition-shadow duration-300 group-hover:ring-gold/60"
           />
           <span className="leading-tight">
-            <span className="block font-display text-xl tracking-[0.08em] text-[#F9F8F6]">{SITE.name}</span>
+            <span className="block font-sans text-lg font-semibold tracking-wide text-[#F9F8F6]">{SITE.name}</span>
             <span className="block font-mono text-[10px] uppercase tracking-[0.22em] text-gold/80">{SITE.tagline}</span>
           </span>
         </Link>
