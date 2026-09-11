@@ -77,22 +77,22 @@ export const MANIFESTO = [
   {
     number: "01",
     title: "Faith",
-    body: "Everything starts here — the conviction that pressure has a purpose and that what you're carrying was given to you on purpose.",
+    body: "Everything starts here — the belief that pressure can have a purpose, and that even difficult seasons can shape us in ways we may not yet understand.",
   },
   {
     number: "02",
     title: "Foundation",
-    body: "Character before platform. Roots before reach. We build on what cannot be shaken, or we build nothing at all.",
+    body: "Character before platform. Roots before reach. We build on what cannot be shaken, because lasting lives require a foundation that can hold.",
   },
   {
     number: "03",
     title: "Focus",
-    body: "Distraction is the quiet thief of destiny. Focus is faith with its sleeves rolled up — one thing, done with your whole heart.",
+    body: "Distraction is the quiet thief of purpose. Focus is faith with its sleeves rolled up — one thing, done with your whole heart.",
   },
   {
     number: "04",
     title: "Finish",
-    body: "Starting is loud. Finishing is legendary. The press is not the punishment — it's the path. Prevail anyway.",
+    body: "Starting is exciting. Finishing takes perseverance. The press is not the punishment — it's part of the path. Keep pressing. Keep building. Prevail.",
   },
 ];
 
