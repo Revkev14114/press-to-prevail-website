@@ -6,20 +6,20 @@ const OFFERS = [
   {
     icon: User,
     title: "One-on-One Coaching",
-    status: "Waitlist Open",
-    body: "A small-cohort coaching practice for people ready to stop patching and start rebuilding — faith, foundation, focus, finish. Limited seats when the first cohort opens.",
+    status: "Coming Soon",
+    body: "Personal coaching for people who are ready to move forward — with greater faith, clarity, focus, and purpose. Together, we'll identify what's holding you back and build a path toward where you want to go.",
   },
   {
     icon: Users,
     title: "Leadership & Team Workshops",
-    status: "Booking Now",
-    body: "Half-day and full-day working sessions for leadership teams: culture, accountability, and building something that outlasts the quarterly report.",
+    status: "Now Booking",
+    body: "Half-day and full-day working sessions designed to help leadership teams strengthen communication, build accountability, clarify their purpose, and work better together.",
   },
   {
     icon: Church,
     title: "Church & Ministry Consulting",
-    status: "Booking Now",
-    body: "Straightforward counsel for churches and ministries — leadership structure, volunteer culture, and building programs on foundations that hold.",
+    status: "Now Booking",
+    body: "Practical guidance for churches and ministries seeking to strengthen leadership, develop people, engage volunteers, and build a healthier foundation for the work ahead.",
   },
 ];
 
@@ -93,6 +93,21 @@ export default function Consulting() {
             </Reveal>
           ))}
         </div>
+      </section>
+
+      {/* THE UNDERLYING MESSAGE */}
+      <section className="mx-auto max-w-4xl px-6 pb-24 lg:px-10">
+        <Reveal>
+          <figure data-testid="consulting-promise" className="border-l-2 border-gold pl-6 sm:pl-8">
+            <blockquote className="font-serif text-xl italic leading-snug text-[#F9F8F6]/90 sm:text-2xl">
+              “I'm not here to tell you how to run your life, your team, or your church. I'm here
+              to bring experience, perspective, and honest conversation that can help you build better.”
+            </blockquote>
+            <figcaption className="mt-4 font-mono text-[11px] uppercase tracking-[0.25em] text-gold/80">
+              — Kevin Johnson
+            </figcaption>
+          </figure>
+        </Reveal>
       </section>
 
       {/* PROCESS */}

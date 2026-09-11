@@ -171,5 +171,5 @@ export const ENQUIRY_TYPES = [
   { value: "workshop", label: "Workshop" },
   { value: "books", label: "Books / Bulk Order" },
   { value: "media", label: "Media / Interview" },
-  { value: "coaching", label: "Coaching (waitlist)" },
+  { value: "coaching", label: "Coaching (coming soon)" },
 ];
