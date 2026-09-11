@@ -67,9 +67,9 @@ function Hero() {
           >
             <p className="max-w-lg text-base font-light leading-relaxed text-[#F9F8F6]/70 sm:text-lg">
               {SITE.name} is a movement of books, keynotes, and honest conversations for people
-              navigating the pressures of life. Pressure doesn't have to break us. It can shape us,
-              strengthen us, and move us forward. The press isn't the end of the story. It can be
-              the path to becoming who we are meant to be.
+              navigating the pressures of life. We believe pressure doesn't have to break us. It can
+              shape us, strengthen us, and move us forward. The press isn't the end of the story.
+              It can become part of the path to becoming who we were created to be.
             </p>
             <div className="mt-8 flex flex-wrap items-center gap-4">
               <button
@@ -85,7 +85,7 @@ function Hero() {
                 data-testid="hero-explore-books-btn"
                 className="group inline-flex items-center gap-2 rounded-full border border-[#F9F8F6]/30 px-7 py-3.5 text-sm font-medium text-[#F9F8F6] transition-colors duration-300 hover:border-gold hover:text-gold"
               >
-                Explore the Books
+                Discover the Book
                 <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
               </Link>
             </div>
@@ -198,8 +198,7 @@ export default function Home() {
                   transition={{ duration: 0.35 }}
                   className="group flex h-full flex-col bg-night p-7 transition-colors duration-500 hover:bg-[#181004]"
                 >
-                  <span className="font-mono text-xs tracking-[0.25em] text-gold">{pillar.number}</span>
-                  <h3 className="mt-5 font-display text-2xl uppercase tracking-[0.06em] text-[#F9F8F6] transition-colors duration-500 group-hover:text-gold">
+                  <h3 className="font-display text-2xl uppercase tracking-[0.06em] text-[#F9F8F6] transition-colors duration-500 group-hover:text-gold">
                     {pillar.title}
                   </h3>
                   <div className="mt-3 h-px w-10 bg-gold/40 transition-all duration-500 group-hover:w-16 group-hover:bg-gold" />

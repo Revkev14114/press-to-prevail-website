@@ -13,9 +13,9 @@ export const SITE = {
   logoFull: "/assets/logo-press-to-prevail.jpg",
   bannerLines: ["Building Faith,", "Building Purpose,", "Building Lives That Last."],
   stats: [
-    { value: "500+", label: "Keynotes & Talks" },
-    { value: "03", label: "Books Published" },
-    { value: "1M+", label: "Lives Reached" },
+    { value: "50 Years", label: "Teaching & Ministry" },
+    { value: "40+ Years", label: "Construction & Leadership" },
+    { value: "1 Message", label: "Build What Lasts" },
   ],
 };
 
