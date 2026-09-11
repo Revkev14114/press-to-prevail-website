@@ -1,13 +1,21 @@
 import { useRef } from "react";
 import { Link, useNavigate, useLocation } from "react-router-dom";
 import { motion, useScroll, useTransform } from "framer-motion";
-import { ArrowUpRight, ArrowRight, Play, Star, ChevronDown } from "lucide-react";
-import { SITE, PRESS, BOOKS, MANIFESTO, KEYNOTES } from "../content/site";
+import { ArrowUpRight, ArrowRight, Play, ChevronDown } from "lucide-react";
+import { SITE, BOOKS, MANIFESTO, KEYNOTES } from "../content/site";
 import { MaskedLine, Reveal, Eyebrow, Marquee } from "../components/Motion";
 import { BookCover } from "../components/BookCard";
-import VideoGallery from "../components/VideoGallery";
 import EnquiryForm from "../components/EnquiryForm";
 import { scrollToEnquire } from "../components/Header";
+
+const BRAND_LINES = [
+  { quote: "Building Faith." },
+  { quote: "Building Purpose." },
+  { quote: "Building Lives That Last." },
+  { quote: "Faith · Foundation · Focus · Finish" },
+  { quote: "Press to Prevail" },
+  { quote: "Build What Lasts." },
+];
 
 const GOLD = "#C9A227";
 
@@ -121,13 +129,15 @@ function Hero() {
 }
 
 export default function Home() {
+  const navigate = useNavigate();
+  const location = useLocation();
   const featured = BOOKS[0];
 
   return (
     <div data-testid="home-page" className="bg-night text-[#F9F8F6]">
       <Hero />
 
-      <Marquee items={PRESS} />
+      <Marquee items={BRAND_LINES} />
 
       {/* FEATURED BOOK */}
       <section className="mx-auto max-w-7xl px-6 py-24 lg:px-10 lg:py-32">
@@ -223,8 +233,8 @@ export default function Home() {
                 Keynotes that outlast the applause.
               </h2>
               <p className="mt-6 text-base leading-relaxed text-stone2">
-                Three flagship talks, each tailored to the room. Watch recent footage below — or
-                explore the full speaking reel on the About page.
+                Messages built from faith, experience, and the realities of life and leadership —
+                designed to give people something to think about long after the room is quiet.
               </p>
             </Reveal>
             <div className="mt-9 space-y-4">
@@ -246,43 +256,30 @@ export default function Home() {
                 data-testid="speaking-reel-link"
                 className="group mt-8 inline-flex items-center gap-2 text-sm font-medium text-gold"
               >
-                View the full speaking reel
+                Explore speaking topics
                 <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
               </Link>
             </Reveal>
           </div>
-          <VideoGallery limit={2} dark />
-        </div>
-      </section>
-
-      {/* PRESS QUOTES */}
-      <section className="border-t border-white/10 py-24 lg:py-28">
-        <div className="mx-auto max-w-7xl px-6 lg:px-10">
-          <Reveal>
-            <span className="inline-flex items-center gap-3 font-mono text-xs uppercase tracking-[0.28em] text-gold">
-              <span className="h-px w-8 bg-gold" />
-              Press & Endorsements
-            </span>
+          <Reveal delay={0.1}>
+            <div className="flex h-full flex-col items-start justify-center rounded-lg border border-dashed border-gold/40 bg-gold/[0.04] p-10">
+              <span className="font-mono text-xs uppercase tracking-[0.28em] text-gold">
+                Speaking Videos — Coming Soon
+              </span>
+              <p className="mt-5 font-serif text-xl italic leading-snug text-[#F9F8F6]/85">
+                “New talks and teaching sessions are being recorded. Check back soon to hear Kevin
+                speak on faith, leadership, purpose, and pressing through life's challenges.”
+              </p>
+              <button
+                data-testid="home-invite-speaker-btn"
+                onClick={() => scrollToEnquire(navigate, location.pathname)}
+                className="group mt-8 inline-flex items-center gap-2 rounded-full bg-gold px-7 py-3.5 text-sm font-semibold uppercase tracking-[0.08em] text-night transition-colors duration-300 hover:bg-goldlight"
+              >
+                Invite Kevin to Speak
+                <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
+              </button>
+            </div>
           </Reveal>
-          <div className="mt-12 grid gap-10 md:grid-cols-2">
-            {PRESS.map((item, i) => (
-              <Reveal key={item.source} delay={i * 0.07}>
-                <figure data-testid={`press-quote-${i}`} className="border-l-2 border-white/15 pl-6 transition-colors duration-500 hover:border-gold">
-                  <div className="flex gap-1 text-gold">
-                    {Array.from({ length: 5 }).map((_, s) => (
-                      <Star key={s} className="h-3.5 w-3.5" fill="currentColor" />
-                    ))}
-                  </div>
-                  <blockquote className="mt-4 font-serif text-xl italic leading-snug text-[#F9F8F6]/85 sm:text-2xl">
-                    “{item.quote}”
-                  </blockquote>
-                  <figcaption className="mt-4 font-mono text-[11px] uppercase tracking-[0.22em] text-stone2/60">
-                    — {item.source}
-                  </figcaption>
-                </figure>
-              </Reveal>
-            ))}
-          </div>
         </div>
       </section>
 

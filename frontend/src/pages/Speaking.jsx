@@ -1,9 +1,8 @@
 import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
-import { ChevronDown, Clock3, MapPin, MonitorPlay, FileBadge } from "lucide-react";
+import { ChevronDown, Clock3, MapPin, MonitorPlay, FileBadge, ArrowRight } from "lucide-react";
 import { KEYNOTES } from "../content/site";
 import { Reveal, MaskedLine } from "../components/Motion";
-import VideoGallery from "../components/VideoGallery";
 import EnquiryForm from "../components/EnquiryForm";
 
 const LOGISTICS = [
@@ -81,15 +80,15 @@ export default function Speaking() {
             <Reveal>
               <span className="inline-flex items-center gap-3 font-mono text-xs uppercase tracking-[0.28em] text-gold">
                 <span className="h-px w-8 bg-gold" />
-                Speaking
+                On Stage
               </span>
             </Reveal>
             <h1 className="mt-6 font-display uppercase leading-[0.95] tracking-[0.02em]">
               <MaskedLine delay={0.15} className="text-5xl sm:text-6xl lg:text-7xl">
-                Keynotes that build
+                Keynotes that outlast
               </MaskedLine>
               <MaskedLine delay={0.3} className="text-5xl sm:text-6xl lg:text-7xl">
-                <span className="text-gold">something that lasts.</span>
+                <span className="text-gold">the applause.</span>
               </MaskedLine>
             </h1>
             <Reveal delay={0.45}>
@@ -98,7 +97,8 @@ export default function Speaking() {
                 understandable, and impossible to ignore.”
               </p>
               <p className="mt-6 max-w-xl text-base font-light leading-relaxed text-stone2">
-                Watch a sample below, explore the flagship talks, and let's build your event together.
+                Messages built from faith, experience, and the realities of life and leadership —
+                designed to give people something to think about long after the room is quiet.
               </p>
             </Reveal>
           </div>
@@ -119,17 +119,27 @@ export default function Speaking() {
         </div>
       </section>
 
-      {/* VIDEO REEL — compact */}
-      <section className="mx-auto max-w-7xl px-6 pb-20 lg:px-10">
+      {/* VIDEOS — COMING SOON */}
+      <section className="mx-auto max-w-4xl px-6 pb-20 lg:px-10">
         <Reveal>
-          <div className="flex items-end justify-between gap-6 border-b border-white/10 pb-4">
-            <h2 className="font-display text-2xl uppercase tracking-[0.04em] sm:text-3xl">The reel</h2>
-            <span className="font-mono text-[10px] uppercase tracking-[0.25em] text-stone2/60">Click any talk to watch</span>
+          <div data-testid="videos-coming-soon" className="flex flex-col items-center rounded-lg border border-dashed border-gold/40 bg-gold/[0.04] px-8 py-14 text-center">
+            <span className="font-mono text-xs uppercase tracking-[0.28em] text-gold">
+              Speaking Videos — Coming Soon
+            </span>
+            <p className="mt-5 max-w-lg font-serif text-xl italic leading-snug text-[#F9F8F6]/85">
+              “I'm currently recording new talks and teaching sessions. They'll be added here as
+              they're ready.”
+            </p>
+            <button
+              data-testid="invite-kevin-btn"
+              onClick={() => document.getElementById("enquire")?.scrollIntoView({ behavior: "smooth" })}
+              className="group mt-8 inline-flex items-center gap-2 rounded-full bg-gold px-7 py-3.5 text-sm font-semibold uppercase tracking-[0.08em] text-night transition-colors duration-300 hover:bg-goldlight"
+            >
+              Invite Kevin to Speak
+              <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
+            </button>
           </div>
         </Reveal>
-        <div className="mt-8">
-          <VideoGallery dark compact />
-        </div>
       </section>
 
       {/* KEYNOTE TOPICS */}
@@ -138,10 +148,10 @@ export default function Speaking() {
           <Reveal>
             <span className="inline-flex items-center gap-3 font-mono text-xs uppercase tracking-[0.28em] text-gold">
               <span className="h-px w-8 bg-gold" />
-              Flagship Talks
+              Featured Keynotes
             </span>
             <h2 className="mt-5 font-display text-4xl uppercase leading-[0.95] tracking-[0.03em] sm:text-5xl">
-              Three keynotes. One foundation.
+              Three messages. One foundation.
             </h2>
           </Reveal>
           <div className="mt-14 grid gap-px overflow-hidden rounded-lg border border-white/10 bg-white/10 md:grid-cols-3">

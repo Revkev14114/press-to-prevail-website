@@ -45,10 +45,12 @@ export const Marquee = ({ items }) => {
       <div className="marquee-track flex w-max items-center gap-14 pr-14">
         {row.map((item, i) => (
           <div key={i} className="flex items-center gap-14 whitespace-nowrap">
-            <span className="font-serif text-lg italic text-[#F9F8F6]/80">“{item.quote}”</span>
-            <span className="font-mono text-[11px] uppercase tracking-[0.25em] text-gold/70">
-              — {item.source}
-            </span>
+            <span className="font-serif text-lg italic text-[#F9F8F6]/80">{item.quote}</span>
+            {item.source && (
+              <span className="font-mono text-[11px] uppercase tracking-[0.25em] text-gold/70">
+                — {item.source}
+              </span>
+            )}
             <span className="h-1.5 w-1.5 rotate-45 bg-gold/70" />
           </div>
         ))}

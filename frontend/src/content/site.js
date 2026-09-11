@@ -131,17 +131,17 @@ export const KEYNOTES = [
   {
     title: "Built to Last: Faith Under Pressure",
     length: "45–60 min",
-    body: "The flagship keynote — how to stand when everything pushes, and why the press is the path to prevailing.",
+    body: "How pressure can shape us rather than defeat us.",
   },
   {
     title: "Foundation First",
     length: "40 min + Q&A",
-    body: "For teams and congregations building something that must outlast them: character, conviction, and the unseen work.",
+    body: "Why character, conviction, and the things nobody sees determine what ultimately stands.",
   },
   {
     title: "Finishing What You Started",
     length: "30–45 min",
-    body: "A practical charge for the middle mile — rituals, accountability and faith that carry you across the finish line.",
+    body: "How faith, focus, and perseverance carry us through the middle mile.",
   },
 ];
 

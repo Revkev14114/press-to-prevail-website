@@ -1,6 +1,6 @@
 import { useState } from "react";
-import { ArrowUpRight, Clock3, Compass, Layers, Home as HomeIcon, Flag, BookOpen } from "lucide-react";
-import { SITE, BOOKS, REVIEWS, ARTICLES } from "../content/site";
+import { ArrowUpRight, Compass, Layers, Home as HomeIcon, Flag, BookOpen } from "lucide-react";
+import { BOOKS } from "../content/site";
 import { Reveal, MaskedLine } from "../components/Motion";
 import BookCard from "../components/BookCard";
 import ChapterPreview from "../components/ChapterPreview";
@@ -136,35 +136,6 @@ export default function Books() {
         </div>
       </section>
 
-      {/* REVIEWS */}
-      <section className="border-y border-white/10 bg-[#101013] py-24 lg:py-32">
-        <div className="mx-auto max-w-7xl px-6 lg:px-10">
-          <Reveal>
-            <span className="inline-flex items-center gap-3 font-mono text-xs uppercase tracking-[0.28em] text-gold">
-              <span className="h-px w-8 bg-gold" />
-              Early Readers
-            </span>
-            <h2 className="mt-5 font-display text-4xl uppercase leading-[0.95] tracking-[0.03em] sm:text-5xl">
-              What readers carry away.
-            </h2>
-          </Reveal>
-          <div className="mt-12 grid gap-8 md:grid-cols-2">
-            {REVIEWS.map((review, i) => (
-              <Reveal key={i} delay={i * 0.06}>
-                <figure data-testid={`review-${i}`} className="h-full rounded-lg border border-white/10 bg-night p-7 transition-colors duration-500 hover:border-gold/50">
-                  <blockquote className="font-serif text-lg italic leading-snug text-[#F9F8F6]/85 sm:text-xl">
-                    “{review.quote}”
-                  </blockquote>
-                  <figcaption className="mt-4 font-mono text-[11px] uppercase tracking-[0.2em] text-stone2/60">
-                    — {review.source}
-                  </figcaption>
-                </figure>
-              </Reveal>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* UPCOMING TITLES */}
       <section className="mx-auto max-w-7xl px-6 py-24 lg:px-10 lg:py-32">
         <Reveal>
@@ -182,50 +153,6 @@ export default function Books() {
               <BookCard book={book} />
             </Reveal>
           ))}
-        </div>
-      </section>
-
-      {/* ARTICLES */}
-      <section className="border-t border-white/10 py-24 lg:py-32">
-        <div className="mx-auto max-w-7xl px-6 lg:px-10">
-          <Reveal>
-            <span className="inline-flex items-center gap-3 font-mono text-xs uppercase tracking-[0.28em] text-gold">
-              <span className="h-px w-8 bg-gold" />
-              Articles & Essays
-            </span>
-            <h2 className="mt-5 font-display text-4xl uppercase leading-[0.95] tracking-[0.03em] sm:text-5xl">
-              From the writing desk.
-            </h2>
-          </Reveal>
-          <div className="mt-12 divide-y divide-white/10 border-y border-white/10">
-            {ARTICLES.map((article, i) => (
-              <Reveal key={article.title} delay={i * 0.05}>
-                <a
-                  href={`mailto:${SITE.email}?subject=Article request: ${encodeURIComponent(article.title)}`}
-                  data-testid={`article-link-${i}`}
-                  className="group flex items-center justify-between gap-6 py-6 transition-colors duration-300"
-                >
-                  <div className="flex items-baseline gap-6">
-                    <span className="font-mono text-xs text-stone2/50">{article.year}</span>
-                    <div>
-                      <p className="font-serif text-xl font-semibold tracking-tight text-[#F9F8F6] transition-colors duration-300 group-hover:text-gold sm:text-2xl">
-                        {article.title}
-                      </p>
-                      <p className="mt-1 font-mono text-[11px] uppercase tracking-[0.2em] text-stone2/50">
-                        {article.outlet}
-                      </p>
-                    </div>
-                  </div>
-                  <div className="flex shrink-0 items-center gap-4">
-                    <span className="hidden items-center gap-1.5 font-mono text-[11px] uppercase tracking-[0.15em] text-stone2/50 sm:inline-flex">
-                      <Clock3 className="h-3.5 w-3.5" /> {article.readTime}
-                    </span>
-                    <ArrowUpRight className="h-5 w-5 text-stone2/50 transition-all duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-gold" />
-                  </div>
-                </a>
-              </Reveal>
-            ))}
-          </div>
         </div>
       </section>
 
