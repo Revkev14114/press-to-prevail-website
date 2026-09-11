@@ -141,7 +141,7 @@ export default function Home() {
             <Reveal>
               <span className="inline-flex items-center gap-3 font-mono text-xs uppercase tracking-[0.28em] text-gold">
                 <span className="h-px w-8 bg-gold" />
-                Latest Release — {featured.year}
+                Featured Book
               </span>
               <h2 className="mt-5 font-display text-4xl uppercase leading-[0.95] tracking-[0.03em] sm:text-5xl lg:text-6xl">
                 {featured.title}
@@ -161,14 +161,14 @@ export default function Home() {
                   data-testid="featured-amazon-buy-btn"
                   className="inline-flex items-center gap-2 rounded-full bg-gold px-7 py-3.5 text-sm font-semibold text-night transition-colors duration-300 hover:bg-goldlight"
                 >
-                  Buy on Amazon <ArrowUpRight className="h-4 w-4" />
+                  Buy the Book <ArrowUpRight className="h-4 w-4" />
                 </a>
                 <Link
                   to="/books"
                   data-testid="featured-all-books-link"
                   className="group inline-flex items-center gap-2 text-sm font-medium text-stone2 transition-colors duration-300 hover:text-gold"
                 >
-                  See all three books
+                  Read More
                   <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
                 </Link>
               </div>

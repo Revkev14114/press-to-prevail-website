@@ -34,7 +34,7 @@ export const BOOKS = [
     year: "2025",
     coverUrl: "/assets/cover-building-the-perfect-home.jpg",
     description:
-      "Building the Perfect Home connects more than 40 years of homebuilding experience with timeless biblical principles to reveal how God builds something far greater than a house.",
+      "What if building a house could teach us something about building a life? Drawing from more than 40 years in residential construction and a lifetime of faith, Building the Perfect Home uses the process of building a home to explore the biblical principles that help us build lives that last.",
     quote: "Every home begins with a blueprint. Every life does too.",
     awards: ["40+ Years of Homebuilding Wisdom", "Timeless Biblical Principles"],
     amazonUrl: "https://www.amazon.com/dp/B0HFC1ZJ3P",
