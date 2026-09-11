@@ -16,7 +16,7 @@ const FAQS = [
   },
   {
     q: "Can we order books in bulk for our team or group?",
-    a: "Absolutely. Bulk and signed copies of Building the Perfect Home are available — choose 'Books / Bulk Order' in the form and include your quantity and timeline.",
+    a: "Absolutely. Bulk and signed copies of Building the Perfect Home are available — choose 'Other' in the form and mention your quantity and timeline in your message.",
   },
   {
     q: "When does the coaching practice open?",

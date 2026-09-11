@@ -1,8 +1,8 @@
 import { useState } from "react";
 import axios from "axios";
 import { toast } from "sonner";
-import { Send, CheckCircle2 } from "lucide-react";
-import { ENQUIRY_TYPES, KEYNOTES } from "../content/site";
+import { ArrowRight, CheckCircle2 } from "lucide-react";
+import { ENQUIRY_TYPES } from "../content/site";
 import { Reveal, Eyebrow } from "./Motion";
 
 const API = `${process.env.REACT_APP_BACKEND_URL}/api`;
@@ -11,17 +11,14 @@ const initial = {
   name: "",
   email: "",
   organization: "",
-  enquiry_type: "speaking",
+  enquiry_type: "keynote",
   event_date: "",
   event_location: "",
-  audience_size: "",
-  topic: "",
-  budget: "",
   message: "",
 };
 
 const inputCls =
-  "w-full rounded-md border border-ink/15 bg-ivory px-4 py-3 text-sm text-ink placeholder:text-muted2 transition-colors duration-300 focus:border-terracotta focus:outline-none focus:ring-2 focus:ring-terracotta/20";
+  "w-full rounded-md border border-ink/15 bg-ivory px-4 py-3 text-sm text-ink placeholder:text-muted2 transition-colors duration-300 focus:border-gold focus:outline-none focus:ring-2 focus:ring-gold/20";
 
 function formatApiErrorDetail(detail) {
   if (detail == null) return "Something went wrong. Please try again.";
@@ -46,7 +43,7 @@ export default function EnquiryForm({ compact = false }) {
       await axios.post(`${API}/enquiries`, payload);
       setSent(true);
       setForm(initial);
-      toast.success("Enquiry received — expect a reply within two business days.");
+      toast.success("Message received — Kevin will personally reply within two business days.");
     } catch (err) {
       toast.error(formatApiErrorDetail(err.response?.data?.detail));
     } finally {
@@ -61,35 +58,36 @@ export default function EnquiryForm({ compact = false }) {
 
       <div className="mx-auto grid max-w-7xl gap-14 px-6 lg:grid-cols-[1fr_1.2fr] lg:gap-20 lg:px-10">
         <Reveal>
-          <Eyebrow light>Booking Enquiry</Eyebrow>
+          <Eyebrow light>Start the Conversation</Eyebrow>
           <h2 className="mt-5 font-serif text-3xl font-medium leading-tight tracking-tight sm:text-4xl lg:text-5xl">
-            Bring this voice to <span className="italic text-terracotta">your room.</span>
+            Bring this voice to <span className="italic text-gold">your room.</span>
           </h2>
           <p className="mt-6 max-w-md text-base leading-relaxed text-[#F9F8F6]/65">
-            Keynotes, workshops, book orders, interviews — or early interest in the coaching practice.
-            Tell me about your event and I will reply personally within two business days.
+            Whether you're planning a keynote, workshop, interview, or simply want to start a
+            conversation, I'd love to hear from you. Tell me a little about your event,
+            organization, or idea, and I'll personally get back to you within two business days.
           </p>
           <div className="mt-10 space-y-4 font-mono text-xs uppercase tracking-[0.2em] text-[#F9F8F6]/50">
-            <p>Response — within 48 hours</p>
+            <p>Response — within 2 business days</p>
             <p>Formats — keynote · workshop · panel · podcast</p>
-            <p>Travel — worldwide booking</p>
+            <p>Travel — available nationwide</p>
           </div>
         </Reveal>
 
         <Reveal delay={0.15}>
           {sent ? (
             <div data-testid="enquiry-success" className="flex h-full min-h-[320px] flex-col items-center justify-center rounded-lg border border-[#F9F8F6]/15 bg-[#F9F8F6]/5 p-10 text-center">
-              <CheckCircle2 className="h-12 w-12 text-terracotta" />
-              <p className="mt-5 font-serif text-2xl font-medium">Thank you — enquiry received.</p>
+              <CheckCircle2 className="h-12 w-12 text-gold" />
+              <p className="mt-5 font-serif text-2xl font-medium">Thank you — message received.</p>
               <p className="mt-3 max-w-sm text-sm text-[#F9F8F6]/60">
-                Your message has been saved and you'll hear back shortly. Want to send another?
+                Kevin will personally get back to you within two business days. Want to send another?
               </p>
               <button
                 data-testid="enquiry-send-another-btn"
                 onClick={() => setSent(false)}
-                className="mt-7 rounded-full border border-[#F9F8F6]/30 px-6 py-2.5 text-sm transition-colors duration-300 hover:border-terracotta hover:text-terracotta"
+                className="mt-7 rounded-full border border-[#F9F8F6]/30 px-6 py-2.5 text-sm transition-colors duration-300 hover:border-gold hover:text-gold"
               >
-                Send another enquiry
+                Send another message
               </button>
             </div>
           ) : (
@@ -98,7 +96,7 @@ export default function EnquiryForm({ compact = false }) {
                 <input data-testid="enquiry-name-input" required placeholder="Full name *" value={form.name} onChange={set("name")} className={inputCls} />
                 <input data-testid="enquiry-email-input" required type="email" placeholder="Email *" value={form.email} onChange={set("email")} className={inputCls} />
                 <input data-testid="enquiry-organization-input" placeholder="Organization" value={form.organization} onChange={set("organization")} className={inputCls} />
-                <select data-testid="enquiry-type-select" value={form.enquiry_type} onChange={set("enquiry_type")} className={inputCls}>
+                <select data-testid="enquiry-type-select" value={form.enquiry_type} onChange={set("enquiry_type")} className={inputCls} aria-label="What are you interested in?">
                   {ENQUIRY_TYPES.map((t) => (
                     <option key={t.value} value={t.value}>{t.label}</option>
                   ))}
@@ -106,35 +104,14 @@ export default function EnquiryForm({ compact = false }) {
                 {!compact && (
                   <>
                     <input data-testid="enquiry-date-input" type="date" value={form.event_date} onChange={set("event_date")} className={inputCls} aria-label="Event date" />
-                    <input data-testid="enquiry-location-input" placeholder="Event location" value={form.event_location} onChange={set("event_location")} className={inputCls} />
-                    <select data-testid="enquiry-audience-select" value={form.audience_size} onChange={set("audience_size")} className={inputCls}>
-                      <option value="">Audience size</option>
-                      <option>Under 100</option>
-                      <option>100 – 500</option>
-                      <option>500 – 2,000</option>
-                      <option>2,000+</option>
-                    </select>
-                    <select data-testid="enquiry-topic-select" value={form.topic} onChange={set("topic")} className={inputCls}>
-                      <option value="">Preferred topic</option>
-                      {KEYNOTES.map((k) => (
-                        <option key={k.title}>{k.title}</option>
-                      ))}
-                      <option>Custom / other</option>
-                    </select>
-                    <select data-testid="enquiry-budget-select" value={form.budget} onChange={set("budget")} className={`${inputCls} sm:col-span-2`}>
-                      <option value="">Budget range (optional)</option>
-                      <option>Under $5,000</option>
-                      <option>$5,000 – $10,000</option>
-                      <option>$10,000 – $25,000</option>
-                      <option>$25,000+</option>
-                    </select>
+                    <input data-testid="enquiry-location-input" placeholder="Location" value={form.event_location} onChange={set("event_location")} className={inputCls} />
                   </>
                 )}
                 <textarea
                   data-testid="enquiry-message-input"
                   required
                   rows={4}
-                  placeholder="Tell me about your event or project *"
+                  placeholder="Tell me a little about what you're planning. *"
                   value={form.message}
                   onChange={set("message")}
                   className={`${inputCls} resize-none sm:col-span-2`}
@@ -144,10 +121,12 @@ export default function EnquiryForm({ compact = false }) {
                 type="submit"
                 data-testid="enquiry-form-submit"
                 disabled={sending}
-                className="mt-6 inline-flex w-full items-center justify-center gap-2 rounded-full bg-gold px-6 py-3.5 text-sm font-semibold text-night transition-colors duration-300 hover:bg-goldlight disabled:opacity-60 sm:w-auto"
+                className="group mt-6 inline-flex w-full items-center justify-center gap-2 rounded-full bg-gold px-6 py-3.5 text-sm font-semibold uppercase tracking-[0.08em] text-night transition-colors duration-300 hover:bg-goldlight disabled:opacity-60 sm:w-auto"
               >
-                {sending ? "Sending…" : "Send Enquiry"} <Send className="h-4 w-4" />
-              </button>            </form>
+                {sending ? "Sending…" : "Start the Conversation"}
+                <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
+              </button>
+            </form>
           )}
         </Reveal>
       </div>

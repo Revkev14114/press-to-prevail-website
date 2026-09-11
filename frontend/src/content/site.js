@@ -167,9 +167,9 @@ export const REVIEWS = [
 ];
 
 export const ENQUIRY_TYPES = [
-  { value: "speaking", label: "Keynote / Speaking" },
+  { value: "keynote", label: "Keynote" },
   { value: "workshop", label: "Workshop" },
-  { value: "books", label: "Books / Bulk Order" },
-  { value: "media", label: "Media / Interview" },
-  { value: "coaching", label: "Coaching (coming soon)" },
+  { value: "ministry", label: "Church & Ministry" },
+  { value: "coaching", label: "Coaching" },
+  { value: "other", label: "Other" },
 ];
