@@ -100,8 +100,10 @@ export default function Consulting() {
         <Reveal>
           <figure data-testid="consulting-promise" className="border-l-2 border-gold pl-6 sm:pl-8">
             <blockquote className="font-serif text-xl italic leading-snug text-[#F9F8F6]/90 sm:text-2xl">
-              “I'm not here to tell you how to run your life, your team, or your church. I'm here
-              to bring experience, perspective, and honest conversation that can help you build better.”
+              “Building something that lasts takes more than a good plan. It takes experience,
+              perspective, honest conversation, and a willingness to look at what's really
+              underneath. I'm here to bring those things to the table and help you build
+              something stronger.”
             </blockquote>
             <figcaption className="mt-4 font-mono text-[11px] uppercase tracking-[0.25em] text-gold/80">
               — Kevin Johnson
