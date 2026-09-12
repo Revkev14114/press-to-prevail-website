@@ -74,10 +74,11 @@ function Hero() {
             transition={{ duration: 0.9, delay: 0.85 }}
           >
             <p className="max-w-lg text-base font-light leading-relaxed text-[#F9F8F6]/70 sm:text-lg">
-              {SITE.name} is a movement of books, keynotes, and honest conversations for people
-              navigating the pressures of life. We believe pressure doesn't have to break us. It can
-              shape us, strengthen us, and move us forward. The press isn't the end of the story.
-              It can become part of the path to becoming who we were created to be.
+              Becoming who we are created to be requires purpose, pursuit, and perseverance. Like
+              a builder who takes a vision and intentionally presses on to build something real, we
+              grow and develop as we intentionally build our lives. {SITE.name} is for people who
+              move forward with determination despite difficulty, distance, or obstacles. Pursue
+              what lies ahead. Overcome what stands in the way.
             </p>
             <div className="mt-8 flex flex-wrap items-center gap-4">
               <button
