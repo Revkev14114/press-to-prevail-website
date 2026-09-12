@@ -77,7 +77,7 @@ export const MANIFESTO = [
   {
     number: "01",
     title: "Faith",
-    body: "Everything starts here — the belief that pressure can have a purpose, and that even difficult seasons can shape us in ways we may not yet understand.",
+    body: "Everything starts here — the foundation for becoming who God created us to be. Faith gives us the confidence to trust His purpose, pursue what lies ahead, and keep building toward a vision we cannot fully see.",
   },
   {
     number: "02",
