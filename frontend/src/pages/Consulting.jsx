@@ -24,10 +24,10 @@ const OFFERS = [
 ];
 
 const PROCESS = [
-  { icon: ClipboardCheck, step: "01", title: "Assess the Foundation", body: "An honest look at what's actually load-bearing — and what's been quietly cracking." },
-  { icon: DraftingCompass, step: "02", title: "Draw the Blueprint", body: "A clear, written plan with straight lines: what we're building, in what order, and why." },
-  { icon: Hammer, step: "03", title: "Do the Work", body: "Weekly reps, real accountability, and the unglamorous middle mile — together." },
-  { icon: BadgeCheck, step: "04", title: "Inspect & Finish", body: "Measure what held, shore up what didn't, and hand you the keys to something that lasts." },
+  { icon: ClipboardCheck, step: "01", title: "Assess the Foundation", body: "An honest look at what's truly load-bearing — and what's been quietly cracking." },
+  { icon: DraftingCompass, step: "02", title: "Draw the Blueprint", body: "A clear plan for what we're building, where we're going, and why it matters." },
+  { icon: Hammer, step: "03", title: "Do the Work", body: "Turn the plan into progress through focused action, accountability, and consistent execution." },
+  { icon: BadgeCheck, step: "04", title: "Inspect & Finish", body: "Measure what held, strengthen what didn't, and build something designed to last." },
 ];
 
 export default function Consulting() {
@@ -121,7 +121,7 @@ export default function Consulting() {
               How It Works
             </span>
             <h2 className="mt-5 font-display text-4xl uppercase leading-[0.95] tracking-[0.03em] sm:text-5xl">
-              Built like a build.
+              Built with purpose.
             </h2>
           </Reveal>
           <div className="mt-14 grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
