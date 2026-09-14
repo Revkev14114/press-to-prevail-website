@@ -134,7 +134,7 @@ export const KEYNOTES = [
     body: "Faith gives us the vision to build what we cannot see.",
   },
   {
-    title: "Foundation First",
+    title: "Foundation",
     length: "40 min + Q&A",
     body: "Why character, conviction, and the things nobody sees determine what ultimately stands.",
   },
