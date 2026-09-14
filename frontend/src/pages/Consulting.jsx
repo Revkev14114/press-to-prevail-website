@@ -25,7 +25,7 @@ const OFFERS = [
 
 const PROCESS = [
   { icon: ClipboardCheck, step: "01", title: "Assess the Foundation", body: "An honest look at what's truly load-bearing — and what's been quietly cracking." },
-  { icon: DraftingCompass, step: "02", title: "Draw the Blueprint", body: "A clear plan for what we're building, where we're going, and why it matters." },
+  { icon: DraftingCompass, step: "02", title: "Trust the Blueprint", body: "A clear plan for what we're building, where we're going, and why it matters." },
   { icon: Hammer, step: "03", title: "Do the Work", body: "Turn the plan into progress through focused action, accountability, and consistent execution." },
   { icon: BadgeCheck, step: "04", title: "Inspect & Finish", body: "Measure what held, strengthen what didn't, and build something designed to last." },
 ];
