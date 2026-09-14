@@ -129,7 +129,7 @@ export const VIDEOS = [
 
 export const KEYNOTES = [
   {
-    title: "Built to Last: Faith Under Pressure",
+    title: "Faith: The Blueprint of Vision",
     length: "45–60 min",
     body: "How pressure can shape us rather than defeat us.",
   },

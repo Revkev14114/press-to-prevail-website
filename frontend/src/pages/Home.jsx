@@ -204,7 +204,7 @@ export default function Home() {
             {MANIFESTO.map((pillar, i) => (
               <Reveal key={pillar.number} delay={i * 0.08}>
                 <motion.div
-                  data-testid={`pillar-${pillar.title.toLowerCase()}`}
+                  data-testid={`pillar-${pillar.number}`}
                   whileHover={{ y: -4 }}
                   transition={{ duration: 0.35 }}
                   className="group flex h-full flex-col bg-night p-7 transition-colors duration-500 hover:bg-[#181004]"
@@ -212,6 +212,9 @@ export default function Home() {
                   <h3 className="font-display text-2xl uppercase tracking-[0.06em] text-[#F9F8F6] transition-colors duration-500 group-hover:text-gold">
                     {pillar.title}
                   </h3>
+                  {pillar.tag && (
+                    <p className="mt-1.5 font-serif text-sm italic text-gold/80">{pillar.tag}</p>
+                  )}
                   <div className="mt-3 h-px w-10 bg-gold/40 transition-all duration-500 group-hover:w-16 group-hover:bg-gold" />
                   <p className="mt-4 text-sm leading-relaxed text-stone2/90">{pillar.body}</p>
                 </motion.div>
