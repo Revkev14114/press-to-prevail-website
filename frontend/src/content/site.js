@@ -139,6 +139,11 @@ export const KEYNOTES = [
     body: "The right foundation provides stability, establishes direction, and stability for the plan.",
   },
   {
+    title: "Focus: Intentional Energy of Daily Discipline",
+    length: "45 min",
+    body: "Focus in alignment with the plan, eliminate distractions, and move the project forward daily.",
+  },
+  {
     title: "Finishing What You Started",
     length: "30–45 min",
     body: "How faith, focus, and perseverance carry us through the middle mile.",
