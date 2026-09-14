@@ -144,9 +144,9 @@ export const KEYNOTES = [
     body: "Focus in alignment with the plan, eliminate distractions, and move the project forward daily.",
   },
   {
-    title: "Finishing What You Started",
+    title: "Finish: Complete What You Started",
     length: "30–45 min",
-    body: "How faith, focus, and perseverance carry us through the middle mile.",
+    body: "Stay with the vision, keep building, and see it through to completion.",
   },
 ];
 
