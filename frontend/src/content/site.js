@@ -131,7 +131,7 @@ export const KEYNOTES = [
   {
     title: "Faith: The Blueprint of Vision",
     length: "45–60 min",
-    body: "How pressure can shape us rather than defeat us.",
+    body: "Faith gives us the vision to build what we cannot see.",
   },
   {
     title: "Foundation First",
