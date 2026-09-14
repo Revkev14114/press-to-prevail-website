@@ -121,7 +121,7 @@ export default function Consulting() {
               How It Works
             </span>
             <h2 className="mt-5 font-display text-4xl uppercase leading-[0.95] tracking-[0.03em] sm:text-5xl">
-              Built with purpose.
+              Follow with purpose.
             </h2>
           </Reveal>
           <div className="mt-14 grid gap-10 sm:grid-cols-2 lg:grid-cols-4">

@@ -42,6 +42,7 @@
 - Still MOCKED: YouTube video IDs, press/review quotes, articles links, social links
 - Email alerts (2026-09-07): Resend via Emergent managed email — owner notification to kevin@presstoprevail.com + branded visitor confirmation on every enquiry (non-blocking, fire-and-forget). Reply-To set to kevin@presstoprevail.com.
 - Speaking page redesign (2026-09-07): hero now features Kevin's podium photo (kevin-speaking.jpg, gold frame) + positioning line "His approach is simple. To take timeless truths and make them practical, understandable, and impossible to ignore."; reel reduced to compact 4-across strip.
+- Consulting process heading (July 2026): “Built with purpose.” changed to “Follow with purpose.” per user's direct copy edit; four process steps unchanged.
 
 ## Backlog (prioritized)
 - P0: Swap in user's real brand — logo, name, colors, book covers, real Amazon product links, real YouTube IDs (all via src/content/site.js + image files in /public/assets/)
