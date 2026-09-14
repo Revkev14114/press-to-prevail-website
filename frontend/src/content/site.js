@@ -134,9 +134,9 @@ export const KEYNOTES = [
     body: "Faith gives us the vision to build what we cannot see.",
   },
   {
-    title: "Foundation",
+    title: "Foundation: Built on What Is True",
     length: "40 min + Q&A",
-    body: "Why character, conviction, and the things nobody sees determine what ultimately stands.",
+    body: "The right foundation provides stability, establishes direction, and stability for the plan.",
   },
   {
     title: "Finishing What You Started",
