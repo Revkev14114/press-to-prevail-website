@@ -11,6 +11,7 @@ import Speaking from "./pages/Speaking";
 import Consulting from "./pages/Consulting";
 import Contact from "./pages/Contact";
 import Admin from "./pages/Admin";
+import BuildingThePerfectHomeInspection from "./pages/BuildingThePerfectHomeInspection";
 
 function ScrollManager() {
   const { pathname } = useLocation();
@@ -48,6 +49,7 @@ function Shell() {
           <Route path="/speaking" element={<Speaking />} />
           <Route path="/consulting" element={<Consulting />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/building-the-perfect-home-inspection" element={<BuildingThePerfectHomeInspection />} />
           <Route path="/admin" element={<Admin />} />
         </Routes>
       </main>

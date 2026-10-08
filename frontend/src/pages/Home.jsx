@@ -182,6 +182,14 @@ export default function Home() {
                   Read More
                   <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
                 </Link>
+                <Link
+                  to="/building-the-perfect-home-inspection"
+                  data-testid="featured-inspection-link"
+                  className="group inline-flex items-center gap-2 text-sm font-medium text-gold"
+                >
+                  Take the Inspection
+                  <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
+                </Link>
               </div>
             </Reveal>
           </div>
@@ -222,6 +230,33 @@ export default function Home() {
             ))}
           </div>
         </div>
+      </section>
+
+      {/* LIFE INSPECTION CTA */}
+      <section className="mx-auto max-w-7xl px-6 py-24 lg:px-10 lg:py-32">
+        <Reveal>
+          <div className="overflow-hidden rounded-lg border border-gold/30 bg-gold/[0.04] px-8 py-12 lg:px-14 lg:py-16">
+            <span className="inline-flex items-center gap-3 font-mono text-xs uppercase tracking-[0.28em] text-gold">
+              <span className="h-px w-8 bg-gold" />
+              Building the Perfect Home Inspection
+            </span>
+            <h2 className="mt-5 max-w-3xl font-display text-4xl uppercase leading-[0.95] tracking-[0.03em] sm:text-5xl">
+              Inspect the life you are building.
+            </h2>
+            <p className="mt-6 max-w-2xl text-base leading-relaxed text-stone2">
+              Faith. Foundation. Focus. Finish. Walk the four load-bearing walls of a lasting life
+              and see what is holding — before you pour the next layer.
+            </p>
+            <Link
+              to="/building-the-perfect-home-inspection"
+              data-testid="home-inspection-cta"
+              className="group mt-8 inline-flex items-center gap-2 rounded-full bg-gold px-7 py-3.5 text-sm font-semibold text-night transition-colors duration-300 hover:bg-goldlight"
+            >
+              Begin the Inspection
+              <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
+            </Link>
+          </div>
+        </Reveal>
       </section>
 
       {/* SPEAKING PREVIEW */}

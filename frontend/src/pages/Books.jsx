@@ -1,5 +1,6 @@
 import { useState } from "react";
-import { ArrowUpRight, Compass, Layers, Home as HomeIcon, Flag, BookOpen } from "lucide-react";
+import { Link } from "react-router-dom";
+import { ArrowUpRight, ArrowRight, Compass, Layers, Home as HomeIcon, Flag, BookOpen } from "lucide-react";
 import { BOOKS } from "../content/site";
 import { Reveal, MaskedLine } from "../components/Motion";
 import BookCard from "../components/BookCard";
@@ -133,6 +134,34 @@ export default function Books() {
               </div>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* INSPECTION CTA */}
+      <section className="border-y border-white/10 bg-[#101013] py-24 lg:py-32">
+        <div className="mx-auto max-w-7xl px-6 lg:px-10">
+          <Reveal>
+            <span className="inline-flex items-center gap-3 font-mono text-xs uppercase tracking-[0.28em] text-gold">
+              <span className="h-px w-8 bg-gold" />
+              From the Book to Your Life
+            </span>
+            <h2 className="mt-5 max-w-3xl font-display text-4xl uppercase leading-[0.95] tracking-[0.03em] sm:text-5xl">
+              Building the Perfect Home Inspection
+            </h2>
+            <p className="mt-6 max-w-2xl text-base leading-relaxed text-stone2">
+              Reading the blueprint is one thing. Walking the job site of your own life is another.
+              This personal assessment uses Faith, Foundation, Focus, and Finish to inspect what
+              you are building — the same way a house is checked before it is called a home.
+            </p>
+            <Link
+              to="/building-the-perfect-home-inspection"
+              data-testid="books-inspection-cta"
+              className="group mt-8 inline-flex items-center gap-2 rounded-full bg-gold px-7 py-3.5 text-sm font-semibold text-night transition-colors duration-300 hover:bg-goldlight"
+            >
+              Begin the Inspection
+              <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
+            </Link>
+          </Reveal>
         </div>
       </section>
 
