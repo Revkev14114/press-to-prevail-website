@@ -226,3 +226,16 @@ async def send_subscriber_welcome(subscriber: dict, books_url: str) -> None:
         '</td></tr></table></td></tr></table>'
     )
     await send_email(to=email, subject=subject, html=html)
+
+
+async def send_inspection_report_email(*, to: str, html: str) -> str | None:
+    """Transactional Life Inspection report. Does not send the chapter welcome."""
+    if not to or not EMAIL_KEY:
+        if not EMAIL_KEY:
+            logger.warning("EMERGENT_EMAIL_KEY not set — inspection report skipped")
+        return None
+    return await send_email(
+        to=to,
+        subject="Your Building the Perfect Home Life Inspection report",
+        html=html,
+    )

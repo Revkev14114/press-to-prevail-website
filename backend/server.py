@@ -15,7 +15,13 @@ from motor.motor_asyncio import AsyncIOMotorClient
 from pydantic import BaseModel, Field, ConfigDict, EmailStr, BeforeValidator
 from starlette.middleware.cors import CORSMiddleware
 
-from emailer import notify_owner_of_enquiry, send_visitor_confirmation, send_subscriber_welcome
+from emailer import (
+    notify_owner_of_enquiry,
+    send_visitor_confirmation,
+    send_subscriber_welcome,
+    send_inspection_report_email,
+)
+from inspection_engine import InspectionSendError, InspectionValidationError, deliver_inspection_report
 
 mongo_url = os.environ['MONGO_URL']
 client = AsyncIOMotorClient(mongo_url)
@@ -181,6 +187,51 @@ async def create_subscriber(input: SubscriberCreate):
 async def list_subscribers(user: dict = Depends(get_current_user)):
     docs = await db.subscribers.find().sort("created_at", -1).to_list(1000)
     return [Subscriber.from_mongo(d).model_dump() for d in docs]
+
+
+class InspectionReportRequest(BaseModel):
+    email: EmailStr
+    answers: dict[str, str]
+    marketing_opt_in: bool = False
+    name: Optional[str] = Field(default=None, max_length=120)
+
+
+async def save_marketing_consent(email: str) -> None:
+    """Optional book/workshop updates. Separate from report delivery. No chapter welcome email."""
+    normalized = email.lower()
+    existing = await db.subscribers.find_one({"email": normalized, "source": "marketing-opt-in"})
+    if existing:
+        return
+    await db.subscribers.insert_one(
+        {
+            "email": normalized,
+            "name": None,
+            "source": "marketing-opt-in",
+            "marketing_consent": True,
+            "marketing_consent_at": datetime.now(timezone.utc).isoformat(),
+            "created_at": datetime.now(timezone.utc).isoformat(),
+        }
+    )
+
+
+@api_router.post("/inspection-reports")
+async def create_inspection_report(input: InspectionReportRequest):
+    books_url = f"{os.environ.get('FRONTEND_URL', '')}/books"
+    try:
+        report = await deliver_inspection_report(
+            email=str(input.email).lower(),
+            answers=input.answers,
+            marketing_opt_in=input.marketing_opt_in,
+            send_email_fn=send_inspection_report_email,
+            save_marketing_consent_fn=save_marketing_consent if input.marketing_opt_in else None,
+            books_url=books_url,
+        )
+    except InspectionValidationError as exc:
+        raise HTTPException(status_code=422, detail=str(exc)) from exc
+    except InspectionSendError as exc:
+        logger.error("Inspection report email failed")
+        raise HTTPException(status_code=502, detail=str(exc)) from exc
+    return {"ok": True, "report": report}
 
 
 @api_router.post("/enquiries", status_code=201)
